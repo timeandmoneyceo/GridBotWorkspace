@@ -1,7 +1,0 @@
-import logging
-from websocket_server import WebsocketServer
-
-def error_handling_1(ws, message):
-    logger.error(f"Error received from client {message}")
-    # Implement retry mechanism here for critical errors
-    pass  # No meaningful optimizations needed in this case
