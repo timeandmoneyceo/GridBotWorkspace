@@ -1,0 +1,80 @@
+{
+  "models": [
+    {
+      "title": "SmolLM2 1.7B",
+      "provider": "ollama",
+      "model": "smollm2:1.7b",
+      "apiBase": "http://localhost:11434"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "SmolLM2 Autocomplete",
+    "provider": "ollama", 
+    "model": "smollm2:1.7b",
+    "apiBase": "http://localhost:11434"
+  },
+  "embeddingsProvider": {
+    "provider": "ollama",
+    "model": "nomic-embed-text",
+    "apiBase": "http://localhost:11434"
+  },
+  "contextProviders": [
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
+      "params": {}
+    },
+    {
+      "name": "folder",
+      "params": {}
+    },
+    {
+      "name": "codebase",
+      "params": {}
+    }
+  ],
+  "slashCommands": [
+    {
+      "name": "edit",
+      "description": "Edit code using SmolLM2"
+    },
+    {
+      "name": "comment",
+      "description": "Add comments to code"
+    },
+    {
+      "name": "share",
+      "description": "Share code snippet"
+    },
+    {
+      "name": "cmd",
+      "description": "Generate terminal commands"
+    }
+  ],
+  "customCommands": [
+    {
+      "name": "test",
+      "prompt": "Write comprehensive tests for the following code:\n\n{{{ input }}}\n\nInclude edge cases and error handling.",
+      "description": "Generate tests for code"
+    }
+  ],
+  "allowAnonymousTelemetry": false,
+  "experimentalFeatures": {
+    "useChromiumForDocsCrawling": false
+  }
+}

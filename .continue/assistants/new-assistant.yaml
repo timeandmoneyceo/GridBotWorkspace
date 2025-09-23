@@ -1,0 +1,50 @@
+# SmolLM2 Agent Assistant Configuration
+# Configured to use local Ollama with SmolLM2 model for agent operations
+
+name: SmolLM2 Agent
+version: 1.0.0
+schema: v1
+description: Local SmolLM2 assistant for autonomous agent operations
+
+# Models define which AI models this assistant can use
+models:
+  - name: SmolLM2 1.7B Local
+    provider: ollama
+    model: smollm2:1.7b
+    apiBase: http://localhost:11434
+    temperature: 0.1
+    maxTokens: 4096
+    topP: 0.9
+
+# Context providers define what information the assistant can access
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
+
+# Agent-specific configuration
+agent:
+  enabled: true
+  maxIterations: 10
+  planningEnabled: true
+  selfReflectionEnabled: true
+  
+# Custom instructions for agent mode
+instructions: |
+  You are an autonomous coding agent using SmolLM2. Your capabilities include:
+  - Analyzing and editing code
+  - Running tests and debugging
+  - Managing project files
+  - Executing terminal commands
+  - Providing detailed explanations
+  
+  Always:
+  - Write clean, well-documented code
+  - Follow Python best practices
+  - Test your changes
+  - Explain your reasoning
+  - Be concise but thorough

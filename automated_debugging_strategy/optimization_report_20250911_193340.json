@@ -1,0 +1,161 @@
+{
+  "file_path": "test_code_optimization.py",
+  "timestamp": "2025-09-11T19:33:40.705044",
+  "total_candidates": 10,
+  "successful_optimizations": 10,
+  "applied_optimizations": 0,
+  "results": [
+    {
+      "function_name": "inefficient_string_concatenation",
+      "line_range": "15-20",
+      "priority": 7,
+      "issues": [
+        "String concatenation in loop - consider join()"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "nested_loops_function",
+      "line_range": "22-28",
+      "priority": 7,
+      "issues": [
+        "Nested loops detected - consider optimization",
+        "String concatenation in loop - consider join()",
+        "String concatenation in loop - consider join()"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "function_with_nested_structures",
+      "line_range": "99-127",
+      "priority": 7,
+      "issues": [
+        "String concatenation in loop - consider join()",
+        "String concatenation in loop - consider join()",
+        "String concatenation in loop - consider join()",
+        "List operations in loop - consider list comprehension",
+        "List operations in loop - consider list comprehension",
+        "List operations in loop - consider list comprehension"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "while_loop_function",
+      "line_range": "59-66",
+      "priority": 5,
+      "issues": [
+        "List operations in loop - consider list comprehension"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "inefficient_list_operations",
+      "line_range": "75-81",
+      "priority": 5,
+      "issues": [
+        "List operations in loop - consider list comprehension"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "lambda_and_comprehension_function",
+      "line_range": "137-152",
+      "priority": 4,
+      "issues": [
+        "Complex comprehension - consider breaking down",
+        "Complex comprehension - consider breaking down"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "<loop>",
+      "line_range": "25-27",
+      "priority": 4,
+      "issues": [
+        "Function call in loop condition",
+        "Function call in loop condition",
+        "Function call in loop condition",
+        "Function call in loop condition"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "<loop>",
+      "line_range": "131-135",
+      "priority": 4,
+      "issues": [
+        "Function call in loop condition"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "<loop>",
+      "line_range": "26-27",
+      "priority": 4,
+      "issues": [
+        "Function call in loop condition",
+        "Function call in loop condition"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    },
+    {
+      "function_name": "main",
+      "line_range": "154-221",
+      "priority": 3,
+      "issues": [
+        "Long function - consider refactoring"
+      ],
+      "success": true,
+      "applied": false,
+      "improvement_ratio": null,
+      "original_time": 0.006327390670776367,
+      "optimized_time": 0.0,
+      "error": null
+    }
+  ]
+}

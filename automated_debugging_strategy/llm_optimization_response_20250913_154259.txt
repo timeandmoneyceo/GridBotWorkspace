@@ -1,0 +1,44 @@
+================================================================================
+LLM Optimization Response - 2025-09-13T15:42:59.087848
+================================================================================
+
+```python
+        while not shutdown_event.is_set():
+            try:
+                # Check if bot is paused
+                if bot_state["paused"]:
+                    log_with_context("INFO", "Bot is paused, skipping iteration")
+                    log_with_context("DEBUG", f"About to sleep for {config.CHECK_ORDER_FREQUENCY} seconds")
+                    time.sleep(config.CHECK_ORDER_FREQUENCY)
+                    continue
+                # Log periodic heartbeat to ML file for LLM agent monitoring
+                current_time = time.time()
+                if current_time - last_heartbeat >= 30:  # Every 30 seconds
+                    try:
+                        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+                        current_price = bot_state.get("current_price", 0)
+                        log_trade_to_ml_file(timestamp, f"HEARTBEAT_{iteration_count}", current_price, 0.0, 0.0)
+                        last_heartbeat = current_time)  # INTENTIONAL ERROR: Extra parenthesis
+                    except Exception as heartbeat_error:
+                        logger.error(f"Failed to log heartbeat to ML file: {heartbeat_error}")
+                        continue
+                # --- ADDED: Breakout Logic ---
+                # If a breakout position is active, manage it and skip the rest of the grid logic.
+                if bot_state.get("breakout_position", {}).get("active"):
+                    logger.info("[BREAKOUT] Active breakout position detected. Managing position...")
+                    manage_breakout_position(exchange, websocket_manager)
+                    time.sleep(config.CHECK_ORDER_FREQUENCY)  # Wait before the next check
+                    continue  # Skip the rest of the main loop to focus on the breakout
+                # If not in a breakout, check if conditions are right for a new one.
+                check_for_breakout(exchange, websocket_manager)
+                # If a breakout was just initiated, loop again to let manage_breakout_position take over.
+                    if bot_state.get("breakout_position", {}).get("active"):
+                        logger.info("[BREAKOUT] New breakout trade initiated. Skipping grid logic for this cycle.")
+                        time.sleep(config.CHECK_ORDER_FREQUENCY)
+            except Exception as error:
+                logger.error(f"Failed to execute loop iteration: {error}")
+```
+
+================================================================================
+END OF RESPONSE
+================================================================================

@@ -1,0 +1,328 @@
+{
+    "contributes": {
+        "commands": [
+            {
+                "command": "gridbot.ai.debugPipeline",
+                "title": "AI Debug: Run Debug Cycle on Current File",
+                "category": "GridBot AI",
+                "icon": "$(debug-alt)"
+            },
+            {
+                "command": "gridbot.ai.optimizeCode",
+                "title": "AI Optimize: Enhance Code Performance",
+                "category": "GridBot AI",
+                "icon": "$(rocket)"
+            },
+            {
+                "command": "gridbot.ai.generateTests",
+                "title": "AI Test: Generate Test Cases for Function",
+                "category": "GridBot AI",
+                "icon": "$(beaker)"
+            },
+            {
+                "command": "gridbot.ai.explainError",
+                "title": "AI Explain: Analyze Selected Error",
+                "category": "GridBot AI",
+                "icon": "$(lightbulb)"
+            },
+            {
+                "command": "gridbot.ai.semanticSearch",
+                "title": "AI Search: Semantic Code Search",
+                "category": "GridBot AI",
+                "icon": "$(search)"
+            },
+            {
+                "command": "gridbot.ai.reviewCode",
+                "title": "AI Review: Code Quality Analysis",
+                "category": "GridBot AI",
+                "icon": "$(checklist)"
+            },
+            {
+                "command": "gridbot.ai.generateDocs",
+                "title": "AI Docs: Generate Documentation",
+                "category": "GridBot AI",
+                "icon": "$(book)"
+            },
+            {
+                "command": "gridbot.ai.naturalLanguage",
+                "title": "AI Command: Natural Language Interface",
+                "category": "GridBot AI",
+                "icon": "$(comment-discussion)"
+            },
+            {
+                "command": "gridbot.ai.fullPipeline",
+                "title": "AI Pipeline: Run Complete Automation",
+                "category": "GridBot AI",
+                "icon": "$(gear)"
+            },
+            {
+                "command": "gridbot.ai.codeCompletion",
+                "title": "AI Complete: Enhanced Code Completion",
+                "category": "GridBot AI",
+                "icon": "$(symbol-method)"
+            },
+            {
+                "command": "gridbot.ai.modelManager",
+                "title": "AI Toolkit: Manage Models",
+                "category": "GridBot AI",
+                "icon": "$(server-environment)"
+            },
+            {
+                "command": "gridbot.ai.promptEngineering",
+                "title": "AI Toolkit: Prompt Engineering",
+                "category": "GridBot AI",
+                "icon": "$(edit)"
+            },
+            {
+                "command": "gridbot.ai.fineTuning",
+                "title": "AI Toolkit: Fine-tune Models",
+                "category": "GridBot AI",
+                "icon": "$(settings-gear)"
+            },
+            {
+                "command": "gridbot.ai.evaluateModel",
+                "title": "AI Toolkit: Evaluate Model Performance",
+                "category": "GridBot AI",
+                "icon": "$(graph)"
+            }
+        ],
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "gridbot.ai.debugPipeline",
+                    "when": "resourceExtname == .py"
+                },
+                {
+                    "command": "gridbot.ai.optimizeCode",
+                    "when": "resourceExtname == .py"
+                },
+                {
+                    "command": "gridbot.ai.generateTests",
+                    "when": "resourceExtname == .py"
+                },
+                {
+                    "command": "gridbot.ai.explainError",
+                    "when": "editorHasSelection"
+                },
+                {
+                    "command": "gridbot.ai.semanticSearch"
+                },
+                {
+                    "command": "gridbot.ai.reviewCode",
+                    "when": "resourceExtname == .py"
+                },
+                {
+                    "command": "gridbot.ai.generateDocs",
+                    "when": "resourceExtname == .py"
+                },
+                {
+                    "command": "gridbot.ai.naturalLanguage"
+                },
+                {
+                    "command": "gridbot.ai.fullPipeline"
+                },
+                {
+                    "command": "gridbot.ai.codeCompletion",
+                    "when": "resourceExtname == .py"
+                },
+                {
+                    "command": "gridbot.ai.modelManager"
+                },
+                {
+                    "command": "gridbot.ai.promptEngineering"
+                },
+                {
+                    "command": "gridbot.ai.fineTuning"
+                },
+                {
+                    "command": "gridbot.ai.evaluateModel"
+                }
+            ],
+            "editor/context": [
+                {
+                    "command": "gridbot.ai.explainError",
+                    "when": "editorHasSelection && resourceExtname == .py",
+                    "group": "1_modification@1"
+                },
+                {
+                    "command": "gridbot.ai.generateDocs",
+                    "when": "resourceExtname == .py",
+                    "group": "1_modification@2"
+                },
+                {
+                    "command": "gridbot.ai.reviewCode",
+                    "when": "resourceExtname == .py",
+                    "group": "1_modification@3"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "gridbot.ai.debugPipeline",
+                    "when": "resourceExtname == .py",
+                    "group": "2_workspace@1"
+                },
+                {
+                    "command": "gridbot.ai.optimizeCode",
+                    "when": "resourceExtname == .py",
+                    "group": "2_workspace@2"
+                }
+            ]
+        },
+        "keybindings": [
+            {
+                "command": "gridbot.ai.naturalLanguage",
+                "key": "ctrl+shift+a",
+                "mac": "cmd+shift+a",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "gridbot.ai.semanticSearch",
+                "key": "ctrl+shift+s",
+                "mac": "cmd+shift+s"
+            },
+            {
+                "command": "gridbot.ai.explainError",
+                "key": "ctrl+shift+e",
+                "mac": "cmd+shift+e",
+                "when": "editorHasSelection"
+            },
+            {
+                "command": "gridbot.ai.debugPipeline",
+                "key": "ctrl+shift+d",
+                "mac": "cmd+shift+d",
+                "when": "resourceExtname == .py"
+            },
+            {
+                "command": "gridbot.ai.optimizeCode",
+                "key": "ctrl+shift+o",
+                "mac": "cmd+shift+o",
+                "when": "resourceExtname == .py"
+            }
+        ],
+        "configuration": {
+            "title": "GridBot AI Integration",
+            "properties": {
+                "gridbot.ai.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable GridBot AI features"
+                },
+                "gridbot.ai.llmEndpoint": {
+                    "type": "string",
+                    "default": "http://localhost:11434",
+                    "description": "Local LLM endpoint URL"
+                },
+                "gridbot.ai.debugModel": {
+                    "type": "string",
+                    "default": "deepseek-coder",
+                    "description": "LLM model for debugging"
+                },
+                "gridbot.ai.optimizationModel": {
+                    "type": "string",
+                    "default": "smollm2:1.7b",
+                    "description": "LLM model for optimization"
+                },
+                "gridbot.ai.autoExplainErrors": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically explain errors when they occur"
+                },
+                "gridbot.ai.enableSemanticSearch": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable semantic code search"
+                },
+                "gridbot.ai.autoGenerateTests": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Automatically generate tests for new functions"
+                },
+                "gridbot.ai.codeReviewLevel": {
+                    "type": "string",
+                    "enum": [
+                        "basic",
+                        "comprehensive",
+                        "strict"
+                    ],
+                    "default": "comprehensive",
+                    "description": "Level of AI code review"
+                },
+                "gridbot.ai.naturalLanguageTimeout": {
+                    "type": "number",
+                    "default": 30,
+                    "description": "Timeout for natural language processing (seconds)"
+                },
+                "gridbot.ai.enableInlineCompletions": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable AI-powered inline code completions"
+                },
+                "gridbot.ai.toolkit.modelProvider": {
+                    "type": "string",
+                    "enum": [
+                        "ollama",
+                        "azure",
+                        "openai",
+                        "huggingface"
+                    ],
+                    "default": "ollama",
+                    "description": "Primary AI model provider for AI Toolkit integration"
+                },
+                "gridbot.ai.toolkit.enablePromptTemplates": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable AI Toolkit prompt template system"
+                },
+                "gridbot.ai.toolkit.autoModelOptimization": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Automatically optimize models based on usage patterns"
+                },
+                "gridbot.ai.toolkit.enableFineTuning": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Enable model fine-tuning capabilities"
+                },
+                "gridbot.ai.toolkit.metricsCollection": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Collect performance metrics for model evaluation"
+                }
+            }
+        },
+        "chatParticipants": [
+            {
+                "id": "gridbot.ai",
+                "name": "gridbot-ai",
+                "description": "AI assistant for GridBot automation pipeline",
+                "isSticky": true,
+                "commands": [
+                    {
+                        "name": "debug",
+                        "description": "Debug code or explain errors"
+                    },
+                    {
+                        "name": "optimize",
+                        "description": "Suggest code optimizations"
+                    },
+                    {
+                        "name": "test",
+                        "description": "Generate test cases"
+                    },
+                    {
+                        "name": "search",
+                        "description": "Semantic code search"
+                    },
+                    {
+                        "name": "review",
+                        "description": "Review code quality"
+                    },
+                    {
+                        "name": "docs",
+                        "description": "Generate documentation"
+                    }
+                ]
+            }
+        ]
+    }
+}

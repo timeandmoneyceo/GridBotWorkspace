@@ -1,0 +1,58 @@
+{
+  "continuous_automation_summary": {
+    "total_cycles": 1,
+    "successful_cycles": 0,
+    "failed_cycles": 0,
+    "consecutive_failures": 0,
+    "start_time": "2025-09-13T16:11:22.689195",
+    "last_cycle_result": null
+  },
+  "session_data": {
+    "start_time": "2025-09-13T16:11:22.671059",
+    "debug_sessions": [
+      {
+        "target_file": "C:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py",
+        "session_id": "debug_20250913_161129",
+        "start_time": "2025-09-13T16:11:29.963080",
+        "errors_fixed": 2,
+        "total_errors": 1,
+        "iterations": 3,
+        "max_iterations": 3,
+        "success": false,
+        "final_status": "Maximum iterations (3) reached without full success"
+      },
+      {
+        "target_file": "C:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+        "session_id": "config_validation_20250913_162512",
+        "start_time": "2025-09-13T16:25:12.602516",
+        "errors_fixed": 0,
+        "total_errors": 0,
+        "iterations": 0,
+        "max_iterations": 10,
+        "success": true,
+        "final_status": "Config validation: PASSED"
+      }
+    ],
+    "optimization_results": [],
+    "total_errors_fixed": 2,
+    "total_optimizations_applied": 0,
+    "continuous_automation": {
+      "current_cycle": 1,
+      "total_cycles_completed": 0,
+      "consecutive_failures": 0,
+      "last_successful_cycle": null,
+      "cycle_start_times": [],
+      "cycle_results": []
+    }
+  },
+  "configuration": {
+    "enabled": true,
+    "max_cycles": 0,
+    "cycle_delay_minutes": 5,
+    "restart_on_max_iterations": true,
+    "stop_on_success": false,
+    "max_consecutive_failures": 5,
+    "health_check_interval": 10,
+    "auto_cleanup_between_cycles": true
+  }
+}

@@ -1,0 +1,2637 @@
+{
+  "iterations": [
+    {
+      "timestamp": "2025-09-20T12:28:36.601268",
+      "iteration": 0,
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 3.24249267578125e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.9788742065429688e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 3.0517578125e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.430511474609375e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T15:37:56.721202",
+      "iteration": 1,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 2.6464462280273438e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 0.0001804828643798828,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.9073486328125e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.3828277587890625e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T16:03:35.595501",
+      "iteration": 2,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.6450881958007812e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.5497207641601562e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.5735626220703125e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.3828277587890625e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T16:19:05.983884",
+      "iteration": 3,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.239776611328125e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.6450881958007812e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.2159347534179688e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 9.775161743164062e-06,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T16:32:49.182633",
+      "iteration": 4,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.4781951904296875e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.239776611328125e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.1205673217773438e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.0967254638671875e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T16:46:10.665790",
+      "iteration": 5,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.1205673217773438e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.0013580322265625e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.71661376953125e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.4781951904296875e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T17:03:20.131132",
+      "iteration": 6,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.9788742065429688e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 4.553794860839844e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.4543533325195312e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 8.106231689453125e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T17:18:48.177333",
+      "iteration": 7,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 2.0265579223632812e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.8596649169921875e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.7642974853515625e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 2.1457672119140625e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T17:39:01.279865",
+      "iteration": 8,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.8835067749023438e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.9550323486328125e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.239776611328125e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.7642974853515625e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T17:52:27.600934",
+      "iteration": 9,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.0967254638671875e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.621246337890625e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.0251998901367188e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.1682510375976562e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T18:10:25.787491",
+      "iteration": 10,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.049041748046875e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.5497207641601562e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.0251998901367188e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.0013580322265625e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T18:23:18.820192",
+      "iteration": 11,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.049041748046875e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.4781951904296875e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.6450881958007812e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.0967254638671875e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T18:35:38.723125",
+      "iteration": 12,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.5974044799804688e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.4543533325195312e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.1920928955078125e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.3828277587890625e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T18:48:44.187905",
+      "iteration": 13,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.1682510375976562e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.6450881958007812e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.2636184692382812e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.0013580322265625e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T19:02:12.882142",
+      "iteration": 14,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 5.364418029785156e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.9073486328125e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.33514404296875e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.4066696166992188e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T19:17:21.230221",
+      "iteration": 15,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 6.651878356933594e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.5735626220703125e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.430511474609375e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.8358230590820312e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T19:31:50.914302",
+      "iteration": 16,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.430511474609375e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 2.574920654296875e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.9073486328125e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 9.298324584960938e-06,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-21T19:46:22.783896",
+      "iteration": 17,
+      "improvements_made": [
+        "Applied 2 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.811981201171875e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 2.3126602172851562e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.8835067749023438e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 2.5510787963867188e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-22T23:13:10.069649",
+      "iteration": 1,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 2.3603439331054688e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 0.00010657310485839844,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 0.00010395050048828125,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.5020370483398438e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    },
+    {
+      "timestamp": "2025-09-23T06:42:11.423238",
+      "iteration": 2,
+      "improvements_made": [
+        "Applied 1 optimizations",
+        "Enhanced 2 regular files",
+        "Processed 1 config files",
+        "Path corrections completed",
+        "Enhanced optimization strategies prioritized"
+      ],
+      "test_categories": {
+        "mixed_indentation": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Simple mixed tabs/spaces",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 2 (<string>, line 3)"
+            },
+            {
+              "name": "Complex nested structure",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected an indented block after 'if' statement on line 4 (<string>, line 5)"
+            },
+            {
+              "name": "Mixed with comments",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 5)"
+            },
+            {
+              "name": "Extreme mixing",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 4)"
+            }
+          ]
+        },
+        "bracket_fixes": {
+          "success_count": 0,
+          "total_tests": 4,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Missing closing paren",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing bracket",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Missing closing brace",
+              "success": false,
+              "execution_time": 0,
+              "error": "invalid syntax (<string>, line 3)"
+            },
+            {
+              "name": "Multiple missing brackets",
+              "success": false,
+              "execution_time": 0,
+              "error": "closing parenthesis ')' does not match opening parenthesis '{' on line 2 (<string>, line 3)"
+            }
+          ]
+        },
+        "string_fixes": {
+          "success_count": 4,
+          "total_tests": 4,
+          "success_rate": 100.0,
+          "results": [
+            {
+              "name": "Unterminated double quote",
+              "success": true,
+              "execution_time": 1.430511474609375e-05,
+              "error": null
+            },
+            {
+              "name": "Unterminated single quote",
+              "success": true,
+              "execution_time": 1.2874603271484375e-05,
+              "error": null
+            },
+            {
+              "name": "Mixed quotes issue",
+              "success": true,
+              "execution_time": 1.2636184692382812e-05,
+              "error": null
+            },
+            {
+              "name": "Complex string",
+              "success": true,
+              "execution_time": 1.9311904907226562e-05,
+              "error": null
+            }
+          ]
+        },
+        "comprehensive_recovery": {
+          "success_count": 0,
+          "total_tests": 3,
+          "success_rate": 0.0,
+          "results": [
+            {
+              "name": "Multiple errors",
+              "success": false,
+              "execution_time": 0,
+              "error": "expected ':' (<string>, line 2)"
+            },
+            {
+              "name": "Nested issues",
+              "success": false,
+              "execution_time": 0,
+              "error": "did you forget parentheses around the comprehension target? (<string>, line 3)"
+            },
+            {
+              "name": "Everything wrong",
+              "success": false,
+              "execution_time": 0,
+              "error": "unindent does not match any outer indentation level (<string>, line 3)"
+            }
+          ]
+        }
+      },
+      "overall_performance": 26.666666666666668
+    }
+  ]
+}

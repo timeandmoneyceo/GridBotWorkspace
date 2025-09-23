@@ -1,0 +1,307 @@
+[
+    // =================================================================================
+    // GridBot AI-Enhanced Development Keybindings
+    // Advanced keyboard shortcuts for AI-powered automation pipeline
+    // =================================================================================
+    // Natural Language AI Assistant
+    {
+        "key": "ctrl+shift+a",
+        "command": "gridbot.ai.naturalLanguage",
+        "when": "editorTextFocus"
+    },
+    // Semantic Code Search
+    {
+        "key": "ctrl+shift+s",
+        "command": "gridbot.ai.semanticSearch"
+    },
+    // AI Error Explanation
+    {
+        "key": "ctrl+shift+e",
+        "command": "gridbot.ai.explainError",
+        "when": "editorHasSelection"
+    },
+    // AI Debug Current File
+    {
+        "key": "ctrl+shift+d",
+        "command": "gridbot.ai.debugPipeline",
+        "when": "resourceExtname == .py"
+    },
+    // AI Code Optimization
+    {
+        "key": "ctrl+shift+o",
+        "command": "gridbot.ai.optimizeCode",
+        "when": "resourceExtname == .py"
+    },
+    // AI Test Generation
+    {
+        "key": "ctrl+shift+t",
+        "command": "gridbot.ai.generateTests",
+        "when": "resourceExtname == .py"
+    },
+    // AI Code Review
+    {
+        "key": "ctrl+shift+r",
+        "command": "gridbot.ai.reviewCode",
+        "when": "resourceExtname == .py"
+    },
+    // AI Documentation Generation
+    {
+        "key": "ctrl+shift+j",
+        "command": "gridbot.ai.generateDocs",
+        "when": "resourceExtname == .py"
+    },
+    // Full AI Pipeline
+    {
+        "key": "ctrl+shift+f12",
+        "command": "gridbot.ai.fullPipeline"
+    },
+    // Quick AI Code Completion
+    {
+        "key": "ctrl+space",
+        "command": "gridbot.ai.codeCompletion",
+        "when": "editorTextFocus && resourceExtname == .py"
+    },
+    // =================================================================================
+    // Enhanced GitHub Copilot Integration
+    // =================================================================================
+    // GitHub Copilot Chat with GridBot Context
+    {
+        "key": "ctrl+shift+i",
+        "command": "github.copilot.interactiveEditor.explain"
+    },
+    // Copilot Suggest Fix with AI Enhancement
+    {
+        "key": "ctrl+shift+f",
+        "command": "github.copilot.quickChat",
+        "args": {
+            "message": "Analyze this error and suggest a fix using GridBot context"
+        },
+        "when": "editorHasSelection"
+    },
+    // =================================================================================
+    // Continue AI Agent Integration
+    // =================================================================================
+    // Continue AI Chat
+    {
+        "key": "ctrl+m",
+        "command": "continue.continueGUIView.focus"
+    },
+    // Continue Quick Fix
+    {
+        "key": "ctrl+shift+m",
+        "command": "continue.quickFix"
+    },
+    // =================================================================================
+    // Cline (Claude Dev) Integration
+    // =================================================================================
+    // Cline Chat Interface
+    {
+        "key": "ctrl+shift+l",
+        "command": "cline.chatView.focus"
+    },
+    // =================================================================================
+    // Enhanced Development Workflow
+    // =================================================================================
+    // Quick Task Execution
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.action.quickOpen",
+        "args": "task "
+    },
+    // Open Terminal with Python Environment
+    {
+        "key": "ctrl+shift+`",
+        "command": "workbench.action.terminal.new",
+        "args": {
+            "cwd": "${workspaceFolder}",
+            "shellArgs": [
+                "-Command",
+                "& '${workspaceFolder}\\.venv\\Scripts\\Activate.ps1'"
+            ]
+        }
+    },
+    // Quick File Search with AI Context
+    {
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen"
+    },
+    // =================================================================================
+    // Code Navigation and Analysis
+    // =================================================================================
+    // Go to Symbol with AI Enhancement
+    {
+        "key": "ctrl+shift+.",
+        "command": "workbench.action.gotoSymbol"
+    },
+    // Find All References with AI Context
+    {
+        "key": "shift+f12",
+        "command": "references-view.findReferences",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    // Peek Definition with AI Enhancement
+    {
+        "key": "alt+f12",
+        "command": "editor.action.peekDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+    },
+    // =================================================================================
+    // Error Handling and Debugging
+    // =================================================================================
+    // Show Problems Panel with AI Insights
+    {
+        "key": "ctrl+shift+u",
+        "command": "workbench.actions.view.problems"
+    },
+    // Quick Fix with AI Suggestions
+    {
+        "key": "ctrl+.",
+        "command": "editor.action.quickFix",
+        "when": "editorTextFocus"
+    },
+    // Toggle Breakpoint with AI Context
+    {
+        "key": "f9",
+        "command": "editor.debug.action.toggleBreakpoint",
+        "when": "debuggersAvailable && editorTextFocus"
+    },
+    // Start Debugging with AI Enhancement
+    {
+        "key": "f5",
+        "command": "workbench.action.debug.start",
+        "when": "debuggersAvailable && !inDebugMode"
+    },
+    // =================================================================================
+    // File and Workspace Management
+    // =================================================================================
+    // Save All with AI Auto-formatting
+    {
+        "key": "ctrl+k s",
+        "command": "workbench.action.files.saveAll"
+    },
+    // Format Document with AI Enhancement
+    {
+        "key": "alt+shift+f",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    // Organize Imports with AI
+    {
+        "key": "shift+alt+o",
+        "command": "editor.action.organizeImports",
+        "when": "editorTextFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)source\\.organizeImports\\b/"
+    },
+    // =================================================================================
+    // AI-Enhanced IntelliSense and Suggestions
+    // =================================================================================
+    // Trigger Suggest with AI Context
+    {
+        "key": "ctrl+space",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+    },
+    // Trigger Parameter Hints with AI
+    {
+        "key": "ctrl+shift+space",
+        "command": "editor.action.triggerParameterHints",
+        "when": "editorHasSignatureHelpProvider && editorTextFocus"
+    },
+    // AI-Enhanced Rename Symbol
+    {
+        "key": "f2",
+        "command": "editor.action.rename",
+        "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    // =================================================================================
+    // Multi-Cursor and Selection with AI
+    // =================================================================================
+    // Add Cursor Above with AI Context
+    {
+        "key": "ctrl+alt+up",
+        "command": "editor.action.insertCursorAbove",
+        "when": "editorTextFocus"
+    },
+    // Add Cursor Below with AI Context
+    {
+        "key": "ctrl+alt+down",
+        "command": "editor.action.insertCursorBelow",
+        "when": "editorTextFocus"
+    },
+    // Select All Occurrences with AI Enhancement
+    {
+        "key": "ctrl+f2",
+        "command": "editor.action.selectHighlights",
+        "when": "editorFocus"
+    },
+    // =================================================================================
+    // Specialized GridBot Commands
+    // =================================================================================
+    // Quick GridBot Health Check
+    {
+        "key": "ctrl+alt+h",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Agent: Health Check"
+    },
+    // Start GridBot WebSocket Server
+    {
+        "key": "ctrl+alt+w",
+        "command": "workbench.action.tasks.runTask",
+        "args": "GridBot: WebSocket Server"
+    },
+    // Start GridBot Core System
+    {
+        "key": "ctrl+alt+g",
+        "command": "workbench.action.tasks.runTask",
+        "args": "GridBot: Core (Backup)"
+    },
+    // Start Ollama Server for AI
+    {
+        "key": "ctrl+alt+o",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Start Ollama Server"
+    },
+    // =================================================================================
+    // Advanced AI Features
+    // =================================================================================
+    // AI-Powered Refactoring
+    {
+        "key": "ctrl+shift+alt+r",
+        "command": "editor.action.refactor",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    // AI Code Action Menu
+    {
+        "key": "ctrl+shift+alt+a",
+        "command": "editor.action.sourceAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // AI-Enhanced Comment Toggle
+    {
+        "key": "ctrl+/",
+        "command": "editor.action.commentLine",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // =================================================================================
+    // Panel and View Management
+    // =================================================================================
+    // Toggle AI Chat Panel
+    {
+        "key": "ctrl+alt+c",
+        "command": "workbench.view.extension.github-copilot-chat"
+    },
+    // Toggle Problems Panel with AI Insights
+    {
+        "key": "ctrl+alt+p",
+        "command": "workbench.actions.view.problems"
+    },
+    // Toggle Terminal with AI Context
+    {
+        "key": "ctrl+alt+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    // Focus Explorer with AI File Search
+    {
+        "key": "ctrl+alt+e",
+        "command": "workbench.view.explorer"
+    }
+]

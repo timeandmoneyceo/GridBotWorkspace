@@ -1,0 +1,104 @@
+{
+  "timestamp": "20250919_233510",
+  "iteration": "5.5",
+  "description": "Integration Validation Test",
+  "categories": {
+    "Colon Tests": {
+      "passed": 3,
+      "total": 3,
+      "time": 213.3286097049713,
+      "details": [
+        {
+          "test": "Function def",
+          "status": "success",
+          "time": 53.10901927947998,
+          "error_type": "colon_error"
+        },
+        {
+          "test": "If statement",
+          "status": "success",
+          "time": 88.67903447151184,
+          "error_type": "colon_error"
+        },
+        {
+          "test": "Class def",
+          "status": "success",
+          "time": 71.43759846687317,
+          "error_type": "colon_error"
+        }
+      ]
+    },
+    "Fixed Indentation Tests": {
+      "passed": 4,
+      "total": 4,
+      "time": 0.05785560607910156,
+      "details": [
+        {
+          "test": "Simple tab-space",
+          "status": "success",
+          "time": 0.008714914321899414,
+          "error_type": "indentation_error"
+        },
+        {
+          "test": "Mixed indents",
+          "status": "success",
+          "time": 0.008355140686035156,
+          "error_type": "indentation_error"
+        },
+        {
+          "test": "Complex case",
+          "status": "success",
+          "time": 0.014288663864135742,
+          "error_type": "no_error"
+        },
+        {
+          "test": "Deep nesting",
+          "status": "success",
+          "time": 0.0173184871673584,
+          "error_type": "no_error"
+        }
+      ]
+    },
+    "Bracket Tests": {
+      "passed": 2,
+      "total": 2,
+      "time": 44.11074900627136,
+      "details": [
+        {
+          "test": "Simple bracket",
+          "status": "success",
+          "time": 44.102840423583984,
+          "error_type": "string_error"
+        },
+        {
+          "test": "Method chaining",
+          "status": "success",
+          "time": 0.005594015121459961,
+          "error_type": "no_error"
+        }
+      ]
+    },
+    "String Tests": {
+      "passed": 2,
+      "total": 2,
+      "time": 80.8400342464447,
+      "details": [
+        {
+          "test": "Unterminated",
+          "status": "success",
+          "time": 36.86068320274353,
+          "error_type": "string_error"
+        },
+        {
+          "test": "Complex quotes",
+          "status": "success",
+          "time": 43.97847008705139,
+          "error_type": "string_error"
+        }
+      ]
+    }
+  },
+  "total_tests": 11,
+  "total_passed": 11,
+  "total_time": 338.3372485637665
+}

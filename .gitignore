@@ -1,0 +1,146 @@
+# === SENSITIVE FILES - DO NOT COMMIT ===
+# Configuration files with API keys and secrets
+automated_debugging_strategy/config.py
+config.py
+**/config.py
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# API Keys and Secrets
+**/api_keys.txt
+**/secrets.txt
+*.pem
+*.key
+*.p12
+*.pfx
+
+# === PYTHON ===
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual environments
+.env/
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# === LOGS AND TEMPORARY FILES ===
+# Log files
+*.log
+logs/
+automation_report_*.json
+automation_session_*.json
+ai_strategy_report_*.md
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+temp/
+tmp/
+
+# === AI/ML MODEL FILES ===
+# Large model files
+*.bin
+*.safetensors
+*.h5
+*.pkl
+*.joblib
+models/
+checkpoints/
+*.onnx
+
+# === DATABASE FILES ===
+*.db
+*.sqlite
+*.sqlite3
+
+# === OS SPECIFIC ===
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# === GIT ===
+*.orig
+*.rej
+
+# === JUPYTER NOTEBOOKS ===
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# === NODE.JS (if any) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

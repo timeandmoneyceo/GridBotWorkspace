@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Debug Automation",
+            "type": "shell",
+            "command": "python",
+            "args": [
+                "-c",
+                "import sys; sys.path.append('c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy'); from vscode_debugger_integration import VSCodeDebuggerIntegration; integration = VSCodeDebuggerIntegration(); integration.start_debugger_listener()"
+            ],
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Stop Debug Automation",
+            "type": "shell",
+            "command": "echo",
+            "args": [
+                "Debug automation stopped"
+            ],
+            "group": "build"
+        }
+    ]
+}

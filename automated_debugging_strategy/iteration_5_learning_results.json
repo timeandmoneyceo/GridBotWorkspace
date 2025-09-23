@@ -1,0 +1,167 @@
+{
+  "timestamp": "20250919_223543",
+  "iteration": 5,
+  "description": "Learning-Based Strategy Evolution",
+  "categories": {
+    "Fixed Colon Tests": {
+      "passed": 5,
+      "total": 5,
+      "time": 908.0160858631134,
+      "details": [
+        {
+          "test": "Function definition",
+          "status": "success",
+          "time": 84.23543667793274,
+          "strategy": "deepseek_precise",
+          "error_type": "missing_colon"
+        },
+        {
+          "test": "Class definition",
+          "status": "success",
+          "time": 59.323530435562134,
+          "strategy": "deepseek_precise",
+          "error_type": "missing_colon"
+        },
+        {
+          "test": "If statement",
+          "status": "success",
+          "time": 662.5895988941193,
+          "strategy": "deepseek_precise",
+          "error_type": "missing_colon"
+        },
+        {
+          "test": "For loop",
+          "status": "success",
+          "time": 55.28022813796997,
+          "strategy": "deepseek_precise",
+          "error_type": "missing_colon"
+        },
+        {
+          "test": "Try block",
+          "status": "success",
+          "time": 46.57669425010681,
+          "strategy": "deepseek_precise",
+          "error_type": "missing_colon"
+        }
+      ],
+      "strategy_performance": {
+        "deepseek_precise": {
+          "success": 5,
+          "total": 5
+        }
+      }
+    },
+    "Robust Indentation Tests": {
+      "passed": 0,
+      "total": 4,
+      "time": 0.1320486068725586,
+      "details": [],
+      "strategy_performance": {}
+    },
+    "Bracket Excellence Tests": {
+      "passed": 2,
+      "total": 3,
+      "time": 180.744971036911,
+      "details": [
+        {
+          "test": "Function calls",
+          "status": "success",
+          "time": 44.02950835227966,
+          "strategy": "llm_bracket_specialist",
+          "error_type": "unmatched_brackets"
+        },
+        {
+          "test": "Method chaining",
+          "status": "success",
+          "time": 91.01311945915222,
+          "strategy": "llm_bracket_specialist",
+          "error_type": "unmatched_brackets"
+        }
+      ],
+      "strategy_performance": {
+        "llm_bracket_specialist": {
+          "success": 2,
+          "total": 2
+        }
+      }
+    },
+    "String Specialist Tests": {
+      "passed": 2,
+      "total": 2,
+      "time": 194.71679043769836,
+      "details": [
+        {
+          "test": "Simple unterminated",
+          "status": "success",
+          "time": 96.6086220741272,
+          "strategy": "llm_string_specialist",
+          "error_type": "unterminated_string"
+        },
+        {
+          "test": "Complex quotes",
+          "status": "success",
+          "time": 98.10526418685913,
+          "strategy": "llm_string_specialist",
+          "error_type": "unterminated_string"
+        }
+      ],
+      "strategy_performance": {
+        "llm_string_specialist": {
+          "success": 2,
+          "total": 2
+        }
+      }
+    },
+    "Multi-Error Timeout Tests": {
+      "passed": 1,
+      "total": 2,
+      "time": 741.3174638748169,
+      "details": [
+        {
+          "test": "All errors",
+          "status": "success",
+          "time": 718.0648324489594,
+          "strategy": "llm_string_specialist",
+          "error_type": "unterminated_string"
+        }
+      ],
+      "strategy_performance": {
+        "llm_string_specialist": {
+          "success": 1,
+          "total": 1
+        }
+      }
+    }
+  },
+  "total_tests": 16,
+  "total_passed": 10,
+  "total_time": 2024.9273598194122,
+  "learning_insights": [
+    {
+      "insight": "Strategy 'deepseek_precise' achieved 100.0% success in Fixed Colon Tests",
+      "evidence": "5/5",
+      "timestamp": 1758347451.755633
+    },
+    {
+      "insight": "Strategy 'llm_bracket_specialist' achieved 100.0% success in Bracket Excellence Tests",
+      "evidence": "2/2",
+      "timestamp": 1758347632.6353457
+    },
+    {
+      "insight": "Strategy 'llm_string_specialist' achieved 100.0% success in String Specialist Tests",
+      "evidence": "2/2",
+      "timestamp": 1758347827.3538861
+    },
+    {
+      "insight": "Strategy llm_string_specialist fixed syntax but lost functionality",
+      "evidence": "Indent + string",
+      "timestamp": 1758347850.6011624
+    },
+    {
+      "insight": "Strategy 'llm_string_specialist' achieved 100.0% success in Multi-Error Timeout Tests",
+      "evidence": "1/1",
+      "timestamp": 1758348568.67337
+    }
+  ],
+  "strategy_effectiveness": {}
+}

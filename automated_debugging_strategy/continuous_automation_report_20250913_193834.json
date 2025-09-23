@@ -1,0 +1,261 @@
+{
+  "continuous_automation_summary": {
+    "total_cycles": 1,
+    "successful_cycles": 0,
+    "failed_cycles": 1,
+    "consecutive_failures": 1,
+    "start_time": "2025-09-13T19:37:41.460979",
+    "last_cycle_result": {
+      "cycle_number": 1,
+      "start_time": "2025-09-13T19:37:41.463618",
+      "end_time": "2025-09-13T19:38:19.051069",
+      "duration": "0:00:37.587451",
+      "success": false,
+      "error": "'dict' object has no attribute 'improvement_ratio'",
+      "files_processed": 0,
+      "errors_fixed": 0,
+      "optimizations_applied": 0
+    }
+  },
+  "session_data": {
+    "start_time": "2025-09-13T19:37:41.445495",
+    "debug_sessions": [
+      {
+        "target_file": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py",
+        "session_id": "debug_20250913_193748",
+        "start_time": "2025-09-13T19:37:48.686217",
+        "errors_fixed": 0,
+        "total_errors": 0,
+        "iterations": 1,
+        "max_iterations": 50,
+        "success": true,
+        "final_status": "Continuous application starts successfully without errors"
+      },
+      {
+        "target_file": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+        "session_id": "config_validation_20250913_193818",
+        "start_time": "2025-09-13T19:38:18.947525",
+        "errors_fixed": 0,
+        "total_errors": 0,
+        "iterations": 0,
+        "max_iterations": 10,
+        "success": true,
+        "final_status": "Config validation: PASSED"
+      }
+    ],
+    "optimization_results": [
+      {
+        "candidate": {
+          "function_name": "GRID_SIZE",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "GRID_SIZE = 12.0",
+          "performance_issues": [
+            "Parameter GRID_SIZE could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "CHECK_ORDER_FREQUENCY",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "CHECK_ORDER_FREQUENCY = 30",
+          "performance_issues": [
+            "Parameter CHECK_ORDER_FREQUENCY could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "NUM_BUY_GRID_LINES",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "NUM_BUY_GRID_LINES = 20",
+          "performance_issues": [
+            "Parameter NUM_BUY_GRID_LINES could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "NUM_SELL_GRID_LINES",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "NUM_SELL_GRID_LINES = 20",
+          "performance_issues": [
+            "Parameter NUM_SELL_GRID_LINES could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "ML_CONFIDENCE_THRESHOLD",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "ML_CONFIDENCE_THRESHOLD = 0.7",
+          "performance_issues": [
+            "Parameter ML_CONFIDENCE_THRESHOLD could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "GRID_SIZE",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "GRID_SIZE = 12.0",
+          "performance_issues": [
+            "Parameter GRID_SIZE could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "CHECK_ORDER_FREQUENCY",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "CHECK_ORDER_FREQUENCY = 30",
+          "performance_issues": [
+            "Parameter CHECK_ORDER_FREQUENCY could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "NUM_BUY_GRID_LINES",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "NUM_BUY_GRID_LINES = 20",
+          "performance_issues": [
+            "Parameter NUM_BUY_GRID_LINES could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "NUM_SELL_GRID_LINES",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "NUM_SELL_GRID_LINES = 20",
+          "performance_issues": [
+            "Parameter NUM_SELL_GRID_LINES could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      },
+      {
+        "candidate": {
+          "function_name": "ML_CONFIDENCE_THRESHOLD",
+          "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\config.py",
+          "line_start": 1,
+          "line_end": 1,
+          "code_snippet": "ML_CONFIDENCE_THRESHOLD = 0.7",
+          "performance_issues": [
+            "Parameter ML_CONFIDENCE_THRESHOLD could be optimized"
+          ],
+          "optimization_priority": 7,
+          "estimated_impact": "medium"
+        },
+        "success": true,
+        "applied": false,
+        "improvement_ratio": 0.0,
+        "error": null
+      }
+    ],
+    "total_errors_fixed": 0,
+    "total_optimizations_applied": 0,
+    "continuous_automation": {
+      "current_cycle": 1,
+      "total_cycles_completed": 0,
+      "consecutive_failures": 0,
+      "last_successful_cycle": null,
+      "cycle_start_times": [],
+      "cycle_results": [
+        {
+          "cycle_number": 1,
+          "start_time": "2025-09-13T19:37:41.463618",
+          "end_time": "2025-09-13T19:38:19.051069",
+          "duration": "0:00:37.587451",
+          "success": false,
+          "error": "'dict' object has no attribute 'improvement_ratio'",
+          "files_processed": 0,
+          "errors_fixed": 0,
+          "optimizations_applied": 0
+        }
+      ]
+    }
+  },
+  "configuration": {
+    "enabled": true,
+    "max_cycles": 0,
+    "cycle_delay_minutes": 5,
+    "restart_on_max_iterations": true,
+    "stop_on_success": false,
+    "max_consecutive_failures": 5,
+    "health_check_interval": 10,
+    "auto_cleanup_between_cycles": true
+  }
+}

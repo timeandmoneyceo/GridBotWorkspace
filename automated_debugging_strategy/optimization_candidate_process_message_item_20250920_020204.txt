@@ -1,0 +1,364 @@
+OPTIMIZATION CANDIDATE: process_message_item
+File: C:\Users\805Sk\GridBotWorkspace\automated_debugging_strategy\gridbot_websocket_server.py
+Lines: 647-851
+Priority: 4/10
+Estimated Impact: low
+
+PERFORMANCE ISSUES:
+- Complex comprehension - consider breaking down
+- Long function - consider refactoring
+
+ORIGINAL CODE:
+--------------------------------------------------
+    def process_message_item(self, client_id, item, server):
+        """Process individual message item."""
+        start_time = time.time()
+        msg_type = item.get("type")
+        command = item.get("command")
+        request_id = item.get("request_id", "unknown")
+        group = item.get("group", "unknown")
+
+        # Handle commands
+        if command:
+            if command == "optimize":
+                if not request_id:
+                    logger.warning(f"Missing request_id in optimize command from client {client_id}")
+                    server.send_message(self.clients[client_id], json.dumps({
+                        "command": "optimize",
+                        "status": "error",
+                        "reason": "Missing request_id"
+                    }))
+                    log_message(client_id, {"command": "optimize", "status": "error", "reason": "Missing request_id"}, "out")
+                    return
+                if client_id in ["Long Term ML", "Wscat"]:  # Allow Long Term ML and Wscat
+                    client_target = self.clients.get("Client")
+                    if client_target:
+                        server.send_message(client_target, json.dumps(item))
+                        logger.info(f"Forwarded optimize command from {client_id} to Client: ID={request_id}, _Group={group}")
+                        log_message("Client", item, "out")
+                        server.send_message(self.clients[client_id], json.dumps({
+                            "command": "optimize",
+                            "status": "received",
+                            "request_id": request_id,
+                            "_group": group
+                        }))
+                        log_message(client_id, {"command": "optimize", "status": "received", "request_id": request_id, "_group": group}, "out")
+                    else:
+                        logger.warning(f"Client not found for optimize command from {client_id}")
+                        server.send_message(self.clients[client_id], json.dumps({
+                            "command": "optimize",
+                            "status": "error",
+                            "reason": "Client not found",
+                            "request_id": request_id
+                        }))
+                        log_message(client_id, {"command": "optimize", "status": "error", "reason": "Client not found"}, "out")
+                else:
+                    logger.debug(f"Skipping optimize command from {client_id}: not forwarding to self")
+                elapsed = time.time() - start_time
+                logger.info(f"Processed optimize command from {client_id}, Time={elapsed:.2f}s")
+                return
+
+            elif command == "config_update":
+                if item.get("status") == "applied":
+                    reason = item.get("reason", "No reason provided")
+                    logger.info(f"Received config_update response from {client_id}: ID={request_id}, _Group={group}, Reason={reason}")
+                    client_target = self.clients.get("Long Term ML")
+                    if client_target:
+                        server.send_message(client_target, json.dumps(item))
+                        logger.info(f"Forwarded config_update response to Long Term ML: ID={request_id}, _Group={group}")
+                        log_message("Long Term ML", item, "out")
+                    elapsed = time.time() - start_time
+                    logger.info(f"Processed config_update response from {client_id}, Time={elapsed:.2f}s")
+                    return
+                if client_id not in ["Long Term ML", "Wscat"]:
+                    logger.warning(f"Unauthorized config_update command from client {client_id}")
+                    server.send_message(self.clients[client_id], json.dumps({
+                        "command": "config_update",
+                        "status": "error",
+                        "reason": "Unauthorized client",
+                        "request_id": request_id,
+                        "_group": group
+                    }))
+                    log_message(client_id, {"command": "config_update", "status": "error", "reason": "Unauthorized client"}, "out")
+                    return
+                params = item.get("parameters")
+                if not params:
+                    logger.warning(f"Missing parameters in config_update from client {client_id}")
+                    server.send_message(self.clients[client_id], json.dumps({
+                        "command": "config_update",
+                        "status": "error",
+                        "reason": "Missing parameters",
+                        "request_id": request_id,
+                        "_group": group
+                    }))
+                    log_message(client_id, {"command": "config_update", "status": "error", "reason": "Missing parameters"}, "out")
+                    self.request_optimization(client_id, group)
+                    return
+
+                # Group-specific cooldowns
+                current_time = time.time()
+                COOLDOWNS = {'grid': 10.0, 'ml': 15.0, 'strategy': 20.0}
+                cooldown = COOLDOWNS.get(group, 10.0)
+                client_group_key = f"{client_id}:{group}"
+                last_update = self.last_update_time.get(client_group_key, 0)
+                if client_id == "Wscat" or current_time - last_update >= cooldown:
+                    param_hash = hashlib.sha256(json.dumps(params, sort_keys=True).encode()).hexdigest()
+                    recent = self.recent_updates[client_group_key]
+                    recent = [u for u in recent if current_time - u['time'] < cooldown]
+                    self.recent_updates[client_group_key] = recent
+
+                    if any(u['hash'] == param_hash for u in recent):
+                        logger.debug(f"Ignoring duplicate config_update: ID={request_id}, _Group={group}, Parameters={params}")
+                        return
+
+                    self.recent_updates[client_group_key].append({
+                        'hash': param_hash,
+                        'time': current_time,
+                        'parameters': params
+                    })
+
+                    store_parameters(params, group)
+                    self.last_update_time[client_group_key] = current_time
+
+                    client_target = self.clients.get("Client")
+                    if client_target:
+                        config_update = {
+                            "command": "config_update",
+                            "request_id": request_id,
+                            "parameters": params,
+                            "reason": item.get("reason", "Parameter update from ML"),
+                            "_group": group,
+                            "timestamp": int(time.time() * 1000)
+                        }
+                        server.send_message(client_target, json.dumps(config_update))
+                        logger.info(f"Forwarded config_update to Client: ID={request_id}, _Group={group}, Parameters={params}, Reason={config_update['reason']}")
+                        log_message("Client", config_update, "out")
+                        server.send_message(self.clients[client_id], json.dumps({
+                            "command": "config_update",
+                            "status": "success",
+                            "request_id": request_id,
+                            "_group": group,
+                            "timestamp": int(time.time() * 1000)
+                        }))
+                        log_message(client_id, {"command": "config_update", "status": "success", "request_id": request_id, "_group": group}, "out")
+                    else:
+                        logger.warning(f"Client not found for config_update from {client_id}")
+                        server.send_message(self.clients[client_id], json.dumps({
+                            "command": "config_update",
+                            "status": "error",
+                            "reason": "Client not found",
+                            "request_id": request_id,
+                            "_group": group
+                        }))
+                        log_message(client_id, {"command": "config_update", "status": "error", "reason": "Client not found"}, "out")
+                else:
+                    logger.debug(f"Skipping config_update due to cooldown: ID={request_id}, _Group={group}, Time since last={current_time - last_update:.2f}s")
+                elapsed = time.time() - start_time
+                logger.info(f"Processed config_update from {client_id} for _group={group}, Time={elapsed:.2f}s")
+                return
+
+            elif command in ["status", "pause", "resume"] and client_id in ["Long Term ML", "Wscat"]:
+                client_target = self.clients.get("Client")
+                if client_target:
+                    server.send_message(client_target, json.dumps(item))
+                    logger.info(f"Forwarded {command} command from {client_id} to Client")
+                    log_message("Client", item, "out")
+                    server.send_message(self.clients[client_id], json.dumps({
+                        "command": command,
+                        "status": "received",
+                        "request_id": request_id,
+                        "_group": group
+                    }))
+                    log_message(client_id, {"command": command, "status": "received", "request_id": request_id, "_group": group}, "out")
+                else:
+                    logger.warning(f"Client not found for {command} command")
+                elapsed = time.time() - start_time
+                logger.info(f"Processed {command} command from {client_id}, Time={elapsed:.2f}s")
+                return
+
+            else:
+                logger.warning(f"Unknown command from client {client_id}: {item}")
+                server.send_message(self.clients[client_id], json.dumps({
+                    "command": command,
+                    "status": "error",
+                    "reason": "Unknown command",
+                    "request_id": request_id,
+                    "_group": group
+                }))
+                log_message(client_id, {"command": command, "status": "error", "reason": "Unknown command"}, "out")
+                elapsed = time.time() - start_time
+                logger.info(f"Processed unknown command from {client_id}, Time={elapsed:.2f}s")
+                return
+
+        # Handle message types
+        if msg_type in ["order", "predictions", "pl_update", "status", "heartbeat"]:
+            if msg_type == "order" or msg_type == "trade":
+                store_trade(client_id, item)
+            elif msg_type == "predictions":
+                store_predictions(client_id, item)
+            elif msg_type == "pl_update":
+                store_pl_update(client_id, item)
+
+            translated_msg = translate_message_for_ml(item)
+            if translated_msg:
+                client_target = self.clients.get("Long Term ML")
+                if client_target:
+                    server.send_message(client_target, json.dumps(translated_msg))
+                    logger.info(f"Forwarded {msg_type} message to Long Term ML: ID={translated_msg.get('request_id', 'unknown')}, _Group={group}")
+                    log_message("Long Term ML", translated_msg, "out")
+                else:
+                    logger.warning(f"Long Term ML not found for {msg_type} message, queuing")
+                    self.message_queue.appendleft(translated_msg)  # Prioritize critical messages
+            elif msg_type not in ["order", "predictions", "pl_update", "heartbeat"]:
+                logger.warning(f"Failed to translate {msg_type} message for Long Term ML: {item}")
+        else:
+            logger.warning(f"Unknown message type from client {client_id}: {item}")
+        elapsed = time.time() - start_time
+        logger.info(f"Processed message item type={msg_type} from {client_id}, Time={elapsed:.2f}s")
+--------------------------------------------------
+
+LLM RESPONSE:
+--------------------------------------------------
+Here is an optimized version of your Python code that addresses the performance issues you've identified:
+
+1. Complex comprehension - consider breaking down
+
+    Original code:
+    ```python
+    logger.warning(f"Client not found for config_update from {client_id}")
+    server.send_message(self.clients[client_id], json.dumps({
+        "command": "config_update",
+        "status": "error",
+        "reason": "Client not found",
+        "request_id": request_id,
+        "_group": group
+    }))
+    log_message(client_id, {"command": "config_update", "status": "error", "reason": "Client not found"}, "out")
+```
+
+    Optimized code:
+
+    ```python
+    def handle_config_update(self):
+        client_id = request.json["client"]
+        for client in self.clients.values():
+            if id(client) == client_id:
+                break
+        else:
+            logger.warning(f"Client not found for config_update from {client_id}")
+            server.send_message(self.clients[client_id], json.dumps({
+                "command": "config_update",
+                "status": "error",
+                "reason": "Client not found",
+                "request_id": request_id,
+                "_group": group
+            }))
+            log_message(client_id, {"command": "config_update", "status": "error", "reason": "Client not found"}, "out")
+
+    def handle_unknown_command(self):
+        client_id = request.json["client"]
+        for client in self.clients.values():
+            if id(client) == client_id:
+                break
+        else:
+            logger.warning(f"Unknown command from {client_id}: {request.json['command']}")
+            server.send_message(self.clients[client_id], json.dumps({
+                "command": request.json["command"],
+                "status": "error",
+                "reason": "Unknown command",
+                "request_id": request_id,
+                "_group": group
+            }))
+            log_message(client_id, {"command": request.json["command"], "status": "error", "reason": "Unknown command"}, "out")
+```
+
+2. Long function - consider refactoring
+
+    Original code:
+    ```python
+    def handle_config_update(self):
+        client_id = request.json["client"]
+        for client in self.clients.values():
+            if id(client) == client_id:
+                break
+        else:
+            logger.warning(f"Client not found for config_update from {client_id}")
+            server.send_message(self.clients[client_id], json.dumps({
+                "command": "config_update",
+                "status": "error",
+                "reason": "Client not found",
+                "request_id": request_id,
+                "_group": group
+            }))
+            log_message(client_id, {"command": "config_update", "status": "error", "reason": "Client not found"}, "out")
+
+    def handle_unknown_command(self):
+        client_id = request.json["client"]
+        for client in self.clients.values():
+            if id(client) == client_id:
+                break
+        else:
+            logger.warning(f"Unknown command from {client_id}: {request.json['command']}")
+            server.send_message(self.clients[client_id], json.dumps({
+                "command": request.json["command"],
+                "status": "error",
+                "reason": "Unknown command",
+                "request_id": request_id,
+                "_group": group
+            }))
+            log_message(client_id, {"command": request.json["command"], "status": "error", "reason": "Unknown command"}, "out")
+```
+
+    Optimized code:
+    ```python
+    def _handle_config_update(self):
+        client_id = request.json["client"]
+        for client in self.clients.values():
+            if id(client) == client_id:
+                break
+        else:
+            logger.warning(f"Client not found for config_update from {client_id}")
+            server.send_message(self.clients[client_id], json.dumps({
+                "command": "config_update",
+                "status": "error",
+                "reason": "Client not found",
+                "request_id": request_id,
+                "_group": group
+            }))
+            log_message(client_id, {"command": "config_update", "status": "error", "reason": "Client not found"}, "out")
+
+    def _handle_unknown_command(self):
+        client_id = request.json["client"]
+        for client in self.clients.values():
+            if id(client) == client_id:
+                break
+        else:
+            logger.warning(f"Unknown command from {client_id}: {request.json['command']}")
+            server.send_message(self.clients[client_id], json.dumps({
+                "command": request.json["command"],
+                "status": "error",
+                "reason": "Unknown command",
+                "request_id": request_id,
+                "_group": group
+            }))
+            log_message(client_id, {"command": request.json["command"], "status": "error", "reason": "Unknown command"}, "out")
+
+    def handle_config_update(self):
+        self._handle_config_update()
+
+    def handle_unknown_command(self):
+        self._handle_unknown_command
+--------------------------------------------------
+
+EXTRACTED OPTIMIZED CODE:
+--------------------------------------------------
+logger.warning(f"Client not found for config_update from {client_id}")
+    server.send_message(self.clients[client_id], json.dumps({
+        "command": "config_update",
+        "status": "error",
+        "reason": "Client not found",
+        "request_id": request_id,
+        "_group": group
+    }))
+    log_message(client_id, {"command": "config_update", "status": "error", "reason": "Client not found"}, "out")
+--------------------------------------------------

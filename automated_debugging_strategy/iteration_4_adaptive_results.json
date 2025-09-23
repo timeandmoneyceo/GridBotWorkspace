@@ -1,0 +1,200 @@
+{
+  "timestamp": "20250919_204548",
+  "iteration": 4,
+  "description": "Adaptive Strategy Selection",
+  "categories": {
+    "Enhanced Colon Errors": {
+      "passed": 5,
+      "total": 5,
+      "time": 3950.633496284485,
+      "details": [
+        {
+          "test": "Simple if colon",
+          "status": "success",
+          "time": 2475.536232948303,
+          "error_type": "colon"
+        },
+        {
+          "test": "Function def colon",
+          "status": "success",
+          "time": 20.863797903060913,
+          "error_type": "colon"
+        },
+        {
+          "test": "Class colon",
+          "status": "success",
+          "time": 92.23575377464294,
+          "error_type": "colon"
+        },
+        {
+          "test": "For loop colon",
+          "status": "success",
+          "time": 704.2397406101227,
+          "error_type": "colon"
+        },
+        {
+          "test": "Try block colon",
+          "status": "success",
+          "time": 657.7388932704926,
+          "error_type": "colon"
+        }
+      ]
+    },
+    "Complex Mixed Indentation": {
+      "passed": 0,
+      "total": 3,
+      "time": 0.11090302467346191,
+      "details": [
+        {
+          "test": "Tab-space mix simple",
+          "status": "failed",
+          "reason": "fix_failed",
+          "time": 0.0435183048248291,
+          "error_type": "indentation"
+        },
+        {
+          "test": "Deep nesting mix",
+          "status": "failed",
+          "reason": "fix_failed",
+          "time": 0.034235239028930664,
+          "error_type": "indentation"
+        },
+        {
+          "test": "Mixed with comments",
+          "status": "failed",
+          "reason": "fix_failed",
+          "time": 0.03222012519836426,
+          "error_type": "indentation"
+        }
+      ]
+    },
+    "Bracket Errors": {
+      "passed": 2,
+      "total": 2,
+      "time": 64.71955895423889,
+      "details": [
+        {
+          "test": "Function call chain",
+          "status": "success",
+          "time": 40.95832967758179,
+          "error_type": "bracket"
+        },
+        {
+          "test": "Nested complex",
+          "status": "success",
+          "time": 23.758491277694702,
+          "error_type": "bracket"
+        }
+      ]
+    },
+    "Multi-Error Timeout Control": {
+      "passed": 1,
+      "total": 2,
+      "time": 685.4283556938171,
+      "details": [
+        {
+          "test": "Fast timeout test",
+          "status": "failed",
+          "reason": "fix_failed",
+          "time": 0.03144645690917969,
+          "error_type": "indentation"
+        },
+        {
+          "test": "Complex but manageable",
+          "status": "success",
+          "time": 685.3904356956482,
+          "error_type": "string"
+        }
+      ]
+    }
+  },
+  "total_tests": 12,
+  "total_passed": 8,
+  "total_time": 4700.892313957214,
+  "adaptive_decisions": [
+    {
+      "test": "Simple if colon",
+      "error_type": "colon",
+      "strategy": "fixed_colon_specialist",
+      "reason": "Targeted colon placement",
+      "timestamp": 1758339948.4905589
+    },
+    {
+      "test": "Function def colon",
+      "error_type": "colon",
+      "strategy": "fixed_colon_specialist",
+      "reason": "Targeted colon placement",
+      "timestamp": 1758342424.031111
+    },
+    {
+      "test": "Class colon",
+      "error_type": "colon",
+      "strategy": "fixed_colon_specialist",
+      "reason": "Targeted colon placement",
+      "timestamp": 1758342444.8957548
+    },
+    {
+      "test": "For loop colon",
+      "error_type": "colon",
+      "strategy": "fixed_colon_specialist",
+      "reason": "Targeted colon placement",
+      "timestamp": 1758342537.1384208
+    },
+    {
+      "test": "Try block colon",
+      "error_type": "colon",
+      "strategy": "fixed_colon_specialist",
+      "reason": "Targeted colon placement",
+      "timestamp": 1758343241.3810701
+    },
+    {
+      "test": "Tab-space mix simple",
+      "error_type": "indentation",
+      "strategy": "enhanced_mixed_indent_fix",
+      "reason": "Specialized indentation handling",
+      "timestamp": 1758343899.1235836
+    },
+    {
+      "test": "Deep nesting mix",
+      "error_type": "indentation",
+      "strategy": "enhanced_mixed_indent_fix",
+      "reason": "Specialized indentation handling",
+      "timestamp": 1758343899.1669421
+    },
+    {
+      "test": "Mixed with comments",
+      "error_type": "indentation",
+      "strategy": "enhanced_mixed_indent_fix",
+      "reason": "Specialized indentation handling",
+      "timestamp": 1758343899.2017994
+    },
+    {
+      "test": "Function call chain",
+      "error_type": "bracket",
+      "strategy": "llm_bracket_specialist",
+      "reason": "Context-aware bracket matching",
+      "timestamp": 1758343899.2360697
+    },
+    {
+      "test": "Nested complex",
+      "error_type": "bracket",
+      "strategy": "llm_bracket_specialist",
+      "reason": "Context-aware bracket matching",
+      "timestamp": 1758343940.1959743
+    },
+    {
+      "test": "Fast timeout test",
+      "error_type": "indentation",
+      "strategy": "enhanced_mixed_indent_fix",
+      "reason": "Specialized indentation handling",
+      "timestamp": 1758343963.9555888
+    },
+    {
+      "test": "Complex but manageable",
+      "error_type": "string",
+      "strategy": "llm_string_specialist",
+      "reason": "Intelligent string termination",
+      "timestamp": 1758343963.9883537
+    }
+  ]
+}

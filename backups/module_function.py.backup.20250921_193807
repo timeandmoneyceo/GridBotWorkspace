@@ -1,0 +1,6 @@
+# test module
+
+def compute(a, b):
+    """Add two numbers"""
+    res = a + b
+    return res

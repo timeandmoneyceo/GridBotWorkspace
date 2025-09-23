@@ -1,0 +1,44 @@
+================================================================================
+LLM Optimization Response - 2025-09-13T14:35:42.132305
+================================================================================
+
+# Corrected code block here (same lines as input)
+# Include all provided lines with the fix applied
+
+```python
+            (bot_state["sklearn_rf_model"], bot_state["sklearn_sgd_model"]), \
+            bot_state["pytorch_model"], bot_state["xgb_model"], bot_state["meta_model"] = models
+            bot_state["last_retrain_time"] = time.time()
+            logger.info("Initial model retraining completed")
+
+    try:
+        # Main loop for continuous trading
+        log_with_context("INFO", "Starting main trading loop")
+        while not shutdown_event.is_set():
+            try:
+                # Check if bot is paused
+                if bot_state["paused"]:
+                    log_with_context("INFO", "Bot is paused, skipping iteration")
+                    log_with_context("DEBUG", f"About to sleep for {config.CHECK_ORDER_FREQUENCY} seconds")
+                    time.sleep(config.CHECK_ORDER_FREQUENCY)  # Intentional error: Missing closing parenthesis
+                    continue
+
+                # Log periodic heartbeat to ML file for LLM agent monitoring
+                current_time = time.time()
+                if current_time - last_heartbeat >= config.CHECK_ORDER_FREQUENCY:  # Every 30 seconds
+                    try:
+                        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+                        current_price = bot_state.get("current_price", 0)
+                        log_trade_to_ml_file(timestamp, f"HEARTBEAT_{iteration_count}", current_price, 0.0, 0.0)
+                        last_heartbeat = current_time
+                    except Exception as heartbeat_error:
+                        logger.error(f"Failed to log heartbeat to ML file: {heartbeat_error}")
+
+                """ # --- ADDED: Breakout Logic ---
+                # If a breakout position is active, manage it and skip the rest of the grid logic.
+
+```
+
+================================================================================
+END OF RESPONSE
+================================================================================

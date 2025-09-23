@@ -1,0 +1,19 @@
+{
+  "timestamp": "20250913_194213",
+  "total_files": 2,
+  "total_candidates": 0,
+  "total_applied": 0,
+  "efficiency_rate": 0,
+  "file_results": {
+    "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\gridbot_websocket_server.py": {
+      "candidates": 0,
+      "applied": 0,
+      "results": []
+    },
+    "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py": {
+      "candidates": 0,
+      "applied": 0,
+      "results": []
+    }
+  }
+}

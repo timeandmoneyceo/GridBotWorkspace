@@ -1,0 +1,12 @@
+{
+  "name": "code_review",
+  "template": "Perform a comprehensive code review for this Python code:\n\n{code}\n\nAnalyze:\n1. Code quality and style\n2. Security vulnerabilities\n3. Performance issues\n4. Best practices compliance\n5. Maintainability concerns",
+  "category": "review",
+  "created": "2025-09-20T18:45:18.224137",
+  "metadata": {
+    "default": true,
+    "gridbot_standard": true
+  },
+  "usage_count": 0,
+  "last_used": null
+}

@@ -1,0 +1,29 @@
+{
+  "model_usage": {
+    "llm_interface": [
+      {
+        "timestamp": "2025-09-23T10:26:18.025064",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 17.684589,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      }
+    ]
+  },
+  "response_times": {
+    "llm_interface": [
+      17.684589
+    ]
+  },
+  "success_rates": {
+    "llm_interface": [
+      1
+    ]
+  },
+  "error_rates": {
+    "llm_interface": []
+  }
+}

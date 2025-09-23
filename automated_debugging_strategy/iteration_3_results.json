@@ -1,0 +1,248 @@
+{
+  "overall_success_rate": 72.72727272727273,
+  "total_success": 24,
+  "total_tests": 33,
+  "category_results": {
+    "Mixed Indentation": {
+      "success_count": 3,
+      "total_tests": 5,
+      "results": [
+        {
+          "name": "Simple tab/space mix",
+          "success": false,
+          "execution_time": 0,
+          "error": "unexpected character after line continuation character (<string>, line 2)"
+        },
+        {
+          "name": "Complex nested mix",
+          "success": true,
+          "execution_time": 31.10101294517517,
+          "error": null
+        },
+        {
+          "name": "Extreme complexity",
+          "success": true,
+          "execution_time": 23.69164252281189,
+          "error": null
+        },
+        {
+          "name": "Mixed with comments",
+          "success": true,
+          "execution_time": 24.235877752304077,
+          "error": null
+        },
+        {
+          "name": "Deep nesting mix",
+          "success": false,
+          "execution_time": 0,
+          "error": "unexpected character after line continuation character (<string>, line 2)"
+        }
+      ],
+      "execution_time": 159.37589120864868
+    },
+    "Bracket Errors": {
+      "success_count": 6,
+      "total_tests": 6,
+      "results": [
+        {
+          "name": "Missing paren",
+          "success": true,
+          "execution_time": 28.186123371124268,
+          "error": null
+        },
+        {
+          "name": "Missing bracket",
+          "success": true,
+          "execution_time": 13.109418869018555,
+          "error": null
+        },
+        {
+          "name": "Missing brace",
+          "success": true,
+          "execution_time": 35.03849005699158,
+          "error": null
+        },
+        {
+          "name": "Multiple missing",
+          "success": true,
+          "execution_time": 32.73077869415283,
+          "error": null
+        },
+        {
+          "name": "Nested complex",
+          "success": true,
+          "execution_time": 30.459484338760376,
+          "error": null
+        },
+        {
+          "name": "Function call chain",
+          "success": true,
+          "execution_time": 35.302568674087524,
+          "error": null
+        }
+      ],
+      "execution_time": 174.83769845962524
+    },
+    "String Errors": {
+      "success_count": 6,
+      "total_tests": 6,
+      "results": [
+        {
+          "name": "Unterminated double",
+          "success": true,
+          "execution_time": 30.456512212753296,
+          "error": null
+        },
+        {
+          "name": "Unterminated single",
+          "success": true,
+          "execution_time": 29.944393157958984,
+          "error": null
+        },
+        {
+          "name": "Mixed quotes",
+          "success": true,
+          "execution_time": 31.35940384864807,
+          "error": null
+        },
+        {
+          "name": "Complex string",
+          "success": true,
+          "execution_time": 27.041620016098022,
+          "error": null
+        },
+        {
+          "name": "Multi-line attempt",
+          "success": true,
+          "execution_time": 25.47971487045288,
+          "error": null
+        },
+        {
+          "name": "Escaped quotes issue",
+          "success": true,
+          "execution_time": 44.04784798622131,
+          "error": null
+        }
+      ],
+      "execution_time": 188.3364062309265
+    },
+    "Colon Errors": {
+      "success_count": 0,
+      "total_tests": 6,
+      "results": [
+        {
+          "name": "Missing if colon",
+          "success": false,
+          "execution_time": 0,
+          "error": "expected ':' (<string>, line 2)"
+        },
+        {
+          "name": "Missing def colon",
+          "success": false,
+          "execution_time": 0,
+          "error": "expected ':' (<string>, line 1)"
+        },
+        {
+          "name": "Missing class colon",
+          "success": false,
+          "execution_time": 0,
+          "error": "expected ':' (<string>, line 1)"
+        },
+        {
+          "name": "Missing for colon",
+          "success": false,
+          "execution_time": 0,
+          "error": "expected ':' (<string>, line 2)"
+        },
+        {
+          "name": "Missing while colon",
+          "success": false,
+          "execution_time": 0,
+          "error": "expected ':' (<string>, line 2)"
+        },
+        {
+          "name": "Missing try colon",
+          "success": false,
+          "execution_time": 0,
+          "error": "expected ':' (<string>, line 2)"
+        }
+      ],
+      "execution_time": 0.020895004272460938
+    },
+    "Multi-Error Cases": {
+      "success_count": 4,
+      "total_tests": 5,
+      "results": [
+        {
+          "name": "Indent + bracket",
+          "success": true,
+          "execution_time": 52.68292450904846,
+          "error": null
+        },
+        {
+          "name": "String + colon",
+          "success": true,
+          "execution_time": 685.9342620372772,
+          "error": null
+        },
+        {
+          "name": "All three errors",
+          "success": true,
+          "execution_time": 107.30268263816833,
+          "error": null
+        },
+        {
+          "name": "Nested chaos",
+          "success": true,
+          "execution_time": 70.17754936218262,
+          "error": null
+        },
+        {
+          "name": "Maximum complexity",
+          "success": false,
+          "execution_time": 0,
+          "error": "'return' outside function (<string>, line 13)"
+        }
+      ],
+      "execution_time": 1068.2222695350647
+    },
+    "Extreme Edge Cases": {
+      "success_count": 5,
+      "total_tests": 5,
+      "results": [
+        {
+          "name": "Empty function body",
+          "success": true,
+          "execution_time": 69.95060539245605,
+          "error": null
+        },
+        {
+          "name": "Only whitespace errors",
+          "success": true,
+          "execution_time": 35.199575424194336,
+          "error": null
+        },
+        {
+          "name": "Unicode in mixed indent",
+          "success": true,
+          "execution_time": 57.177961587905884,
+          "error": null
+        },
+        {
+          "name": "Very deep nesting",
+          "success": true,
+          "execution_time": 93.45758843421936,
+          "error": null
+        },
+        {
+          "name": "Everything wrong",
+          "success": true,
+          "execution_time": 81.64561223983765,
+          "error": null
+        }
+      ],
+      "execution_time": 337.44126057624817
+    }
+  },
+  "timestamp": 1758337829.9963727
+}

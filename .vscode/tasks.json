@@ -1,0 +1,534 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "AI: Model Doctor (on open)",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "automated_debugging_strategy/ai_model_doctor.py"
+      ],
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "AI: Pipeline with AI Doctor Restart",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "automated_debugging_strategy/pipeline_with_ai_doctor_restart.py"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      },
+      "isBackground": false
+    },
+    {
+      "label": "GridBot: WebSocket Server",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "gridbot_websocket_server.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "GridBot: Core (Backup)",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "GridbotBackup.py"
+      ],
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Agent: Health Check",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "agent_harness.py",
+        "health"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Agent: Quick Test",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "agent_harness.py",
+        "quick"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Agent: Full Simulation",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "agent_harness.py",
+        "simulation"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Agent: Dry Run",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "agent_harness.py",
+        "dry-run"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Agent: Performance Test",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "agent_harness.py",
+        "performance"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Agent: LLM Test",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "agent_harness.py",
+        "llm-test"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Start Ollama Server",
+      "type": "shell",
+      "command": "ollama",
+      "args": [
+        "serve"
+      ],
+      "isBackground": true,
+      "presentation": {
+        "reveal": "silent",
+        "panel": "new"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Test SmolLM2 Connection",
+      "type": "shell",
+      "command": "curl",
+      "args": [
+        "-X",
+        "POST",
+        "http://localhost:11434/api/generate",
+        "-H",
+        "Content-Type: application/json",
+        "-d",
+        "{\"model\":\"qwen3:1.7b\",\"prompt\":\"Hello, how are you?\",\"stream\":false}"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI: Debug Current File",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "automated_debugging_strategy/master_automation_pipeline.py",
+        "--target-file",
+        "${file}",
+        "--ai-debug"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
+    },
+    {
+      "label": "AI: Generate Tests for Current File",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "from automated_debugging_strategy.ai_testing_debugging import AITestGenerator; generator = AITestGenerator(); test_content = generator.generate_test_file('${file}'); open('test_${fileBasenameNoExtension}.py', 'w').write(test_content); print('Test file generated: test_${fileBasenameNoExtension}.py')"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI: Optimize Current File",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "automated_debugging_strategy/master_automation_pipeline.py",
+        "--target-file",
+        "${file}",
+        "--ai-optimize"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI: Full Pipeline with Intelligence",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "automated_debugging_strategy/master_automation_pipeline.py",
+        "--enable-ai",
+        "--comprehensive"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      },
+      "isBackground": false
+    },
+    {
+      "label": "AI: Semantic Code Search",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "from automated_debugging_strategy.intelligent_apps_integration import IntelligentAppsIntegration; ai = IntelligentAppsIntegration(); query = input('Enter search query: '); results = ai.semantic_search(query); [print(f'{r[\"file_path\"]}:{r[\"line_number\"]} - {r[\"description\"]}') for r in results]"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI: Code Review Current File",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "from automated_debugging_strategy.intelligent_apps_integration import IntelligentAppsIntegration; import sys; ai = IntelligentAppsIntegration(); changes = [open('${file}').read()]; review = ai.perform_ai_code_review('${file}', changes); print(f'Review Score: {review[\"overall_score\"]}/10'); [print(f'Issue: {issue[\"description\"]}') for issue in review['issues_found']]; [print(f'Suggestion: {sug[\"description\"]}') for sug in review['suggestions']]"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI: Generate Documentation",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "from automated_debugging_strategy.intelligent_apps_integration import IntelligentAppsIntegration; ai = IntelligentAppsIntegration(); code = open('${file}').read(); doc = ai.generate_documentation(code, 'module'); print('Generated Documentation:'); print(doc)"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI: Natural Language Command",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "from automated_debugging_strategy.intelligent_apps_integration import IntelligentAppsIntegration; ai = IntelligentAppsIntegration(); command = input('Enter natural language command: '); result = ai.process_natural_language_command(command); print(f'Action: {result[\"action\"]}'); print(f'Confidence: {result[\"confidence\"]:.2%}'); print('Execution Plan:'); exec_plan = result.get('execution_plan', {}); [print(f'  - {step}') for step in exec_plan.get('steps', [])]"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI: Enhanced Error Analysis",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "print('Paste error traceback and press Enter twice:'); import sys; lines = []; while True: line = input(); if not line: break; lines.append(line); traceback = '\\n'.join(lines); from automated_debugging_strategy.ai_testing_debugging import analyze_error_with_ai; analysis = analyze_error_with_ai(traceback); print(f'Error Type: {analysis[\"error_type\"]}'); print(f'Confidence: {analysis[\"confidence_score\"]:.2%}'); print(f'Fix Time: {analysis[\"estimated_fix_time\"]}'); [print(f'Suggestion: {sug[\"description\"]}') for sug in analysis['fix_suggestions']]"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Toolkit: Model Health Check",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "import requests; import json; models = ['deepseek-coder', 'smollm2:1.7b', 'qwen3:1.7b']; print('AI Toolkit Model Health Check:'); [print(f'  {model}: {\"✓ Available\" if requests.get(f\"http://localhost:11434/api/show\", json={\"name\": model}).status_code == 200 else \"✗ Unavailable\"}') for model in models]"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Toolkit: Download Required Models",
+      "type": "shell",
+      "command": "ollama",
+      "args": [
+        "pull",
+        "${input:modelName}"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Toolkit: Evaluate Model Performance",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "from automated_debugging_strategy.intelligent_apps_integration import IntelligentAppsIntegration; ai = IntelligentAppsIntegration(); metrics = ai.track_ai_feature_usage(); print(f'AI Performance Metrics:'); print(f'  Total Explanations: {metrics[\"feature_usage\"][\"total_explanations\"]}'); print(f'  Cache Hit Rate: {metrics[\"feature_usage\"][\"cache_hits\"] / max(metrics[\"feature_usage\"][\"total_explanations\"], 1):.2%}'); print(f'  Average Confidence: {metrics[\"feature_usage\"][\"avg_confidence\"]:.2%}'); print(f'  Recommendations:'); [print(f'    - {rec}') for rec in metrics.get('recommendations', [])]"
+      ],
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Toolkit: Create Custom Prompt Template",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "import os; import json; prompt_dir = '.vscode/ai-prompts'; os.makedirs(prompt_dir, exist_ok=True); template_name = input('Enter template name: '); template_content = input('Enter prompt template: '); template_data = {'name': template_name, 'template': template_content, 'category': 'gridbot', 'created': '2025-09-20'}; with open(f'{prompt_dir}/{template_name}.json', 'w') as f: json.dump(template_data, f, indent=2); print(f'Prompt template created: {prompt_dir}/{template_name}.json')"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AI Toolkit: Generate Training Data",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-c",
+        "import os; import json; from datetime import datetime; training_dir = 'training-data'; os.makedirs(training_dir, exist_ok=True); data = {'training_examples': [{'input': 'Debug this Python error', 'output': 'AI debugging assistance provided', 'timestamp': datetime.now().isoformat()}], 'metadata': {'purpose': 'GridBot AI fine-tuning', 'created': datetime.now().isoformat()}}; with open(f'{training_dir}/gridbot_training_sample.json', 'w') as f: json.dump(data, f, indent=2); print(f'Training data template created: {training_dir}/gridbot_training_sample.json')"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "clear": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Benchmark Editors",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-m",
+        "automated_debugging_strategy.editor_strategy_benchmark"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Benchmark Editors",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-m",
+        "automated_debugging_strategy.editor_strategy_benchmark"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Benchmark Editors",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-m",
+        "automated_debugging_strategy.editor_strategy_benchmark"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Restore GridbotBackup from backup",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-m",
+        "automated_debugging_strategy.repair_and_restore",
+        "--target",
+        "automated_debugging_strategy/GridbotBackup.py",
+        "--print-backups"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Restore GridbotBackup NOW",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-m",
+        "automated_debugging_strategy.repair_and_restore",
+        "--target",
+        "automated_debugging_strategy/GridbotBackup.py"
+      ],
+      "group": "test"
+    },
+    {
+      "label": "Restore gridbot_websocket_server NOW",
+      "type": "shell",
+      "command": "${config:python.defaultInterpreterPath}",
+      "args": [
+        "-m",
+        "automated_debugging_strategy.repair_and_restore",
+        "--target",
+        "automated_debugging_strategy/gridbot_websocket_server.py"
+      ],
+      "group": "test"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "modelName",
+      "description": "Select AI model to download",
+      "type": "pickString",
+      "options": [
+        "deepseek-coder",
+        "smollm2:1.7b",
+        "qwen3:1.7b",
+        "codellama:7b",
+        "phi3:mini",
+        "llama3.1:8b"
+      ],
+      "default": "deepseek-coder"
+    }
+  ]
+}

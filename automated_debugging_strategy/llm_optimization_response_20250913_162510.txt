@@ -1,0 +1,31 @@
+================================================================================
+LLM Optimization Response - 2025-09-13T16:25:10.935623
+================================================================================
+
+```python
+            if current_time - last_heartbeat >= 30:
+                try:
+                    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+                    current_price = bot_state.get("current_price", 0)
+                    log_trade_to_ml_file(timestamp, f"HEARTBEAT_{iteration_count}", current_price, 0.0, 0.0)
+                    last_heartbeat = current_time
+                except Exception as heartbeat_error:
+                    logger.error(f"Failed to log heartbeat to ML file: {heartbeat_error}")
+                    # --- ADDED: Breakout Logic ---
+                    except SyntaxError as e:
+                        if str(e).startswith("unmatched ')'):
+                            pass  # No extra parenthesis needed
+                        elif str(e).startswith("'(' was never closed"):
+                            pass  # Add closing parenthesis
+                        else:
+                            raise
+                    # If a breakout position is active, manage it and skip the rest of the grid logic.
+                    if bot_state.get("breakout_position", {}).get("active"):
+                        logger.info("[BREAKOUT] Active breakout position detected. Managing position...")
+                        manage_breakout_position(exchange, websocket_manager)
+                        time.sleep(config.CHECK_ORDER_FREQUENCY)  # Wait before the next check
+```
+
+================================================================================
+END OF RESPONSE
+================================================================================

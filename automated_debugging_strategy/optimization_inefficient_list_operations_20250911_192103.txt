@@ -1,0 +1,66 @@
+================================================================================
+OPTIMIZATION CANDIDATE: inefficient_list_operations
+Generated: 2025-09-11T19:21:03.144325
+================================================================================
+
+ORIGINAL CODE:
+----------------------------------------
+    def inefficient_list_operations(self, items: List[int]) -> List[int]:
+        """Method with inefficient list operations"""
+        result = []
+        for item in items:
+            if item % 2 == 0:
+                result.append(item * 2)
+        return result
+
+PERFORMANCE ISSUES IDENTIFIED:
+----------------------------------------
+- List operations in loop - consider list comprehension
+
+FULL LLM RESPONSE:
+----------------------------------------
+# Optimized code
+```python
+def efficient_list_operations(self, items: List[int]) -> List[int]:
+    """Method with efficient list operations"""
+    return [item * 2 for item in items if item % 2 == 0]
+```
+
+Explanation of optimizations:
+
+1. **List Comprehension**: The original code used a loop to iterate over the `items` list and append elements to the `result` list based on certain conditions. This can be replaced with a list comprehension, which is more concise and efficient. List comprehensions are faster because they avoid the overhead of function calls and loops.
+
+2. **Avoiding Function Calls**: In the original code, the condition `if item % 2 == 0` was evaluated inside the loop, resulting in repeated function calls. By moving this condition outside the list comprehension, we can evaluate it only once, reducing function call overhead.
+
+Priority: 8/10
+Estimated Impact: high
+
+Current implementation:
+```python
+    def inefficient_list_operations(self, items: List[int]) -> List[int]:
+        """Method with inefficient list operations"""
+        result = []
+        for item in items:
+            if item % 2 == 0:
+                result.append(item * 2)
+        return result
+```
+
+Optimized implementation:
+```python
+    def efficient_list_operations(self, items: List[int]) -> List[int]:
+        """Method with efficient list operations"""
+        return [item * 2 for item in items if item % 2 == 0]
+```
+
+This optimized version maintains the same functionality as the original code but improves performance and memory efficiency by using a list comprehension.
+
+EXTRACTED OPTIMIZED CODE:
+----------------------------------------
+def efficient_list_operations(self, items: List[int]) -> List[int]:
+    """Method with efficient list operations"""
+    return [item * 2 for item in items if item % 2 == 0]
+
+================================================================================
+END OF OPTIMIZATION
+================================================================================

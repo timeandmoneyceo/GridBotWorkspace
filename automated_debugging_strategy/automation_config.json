@@ -1,0 +1,77 @@
+{
+  "llm_base_url": "http://localhost:8000/v1",
+  "llm_model": "Qwen3-1.7B",
+  "llm_api_key": "EMPTY",
+  "llm_timeout": 600,
+  "llm_temperature": 0.6,
+  "llm_top_p": 0.95,
+  "llm_top_k": 20,
+  "llm_min_p": 0.0,
+  "llm_max_tokens": 32768,
+  "enable_thinking": true,
+  "deepseek_debugger_url": "http://localhost:11434",
+  "deepseek_model": "deepseek-coder",
+  "qwen_optimizer_url": "http://localhost:11434",
+  "qwen_model": "qwen3:1.7b",
+  "debug_timeout": 300,
+  "backup_dir": "backups",
+  "validate_syntax": true,
+  "max_debug_iterations": 50,
+  "min_optimization_improvement": 0.01,
+  "python_executable": "C:\\Users\\805Sk\\GridBotWorkspace\\.venv\\Scripts\\python.exe",
+  "target_files": [
+    "gridbot_websocket_server.py",
+    "GridbotBackup.py",
+    "config.py"
+  ],
+  "run_optimization": true,
+  "restart_gridbot_after_changes": true,
+  "save_reports": true,
+  "verbose": true,
+  "performance_profiling": {
+    "enabled": true,
+    "timeout_per_run": 30
+  },
+  "optimization_settings": {
+    "analyze_ast": true,
+    "profile_performance": true,
+    "min_function_length": 5,
+    "max_candidates_per_file": 20
+  },
+  "safety_settings": {
+    "create_backups": true,
+    "validate_before_apply": false,
+    "rollback_on_failure": true
+  },
+  "continuous_automation": {
+    "enabled": true,
+    "max_cycles": 0,
+    "cycle_delay_minutes": 5,
+    "restart_on_max_iterations": false,
+    "stop_on_success": false,
+    "max_consecutive_failures": 10,
+    "health_check_interval": 20,
+    "auto_cleanup_between_cycles": true
+  },
+  "file_management": {
+    "max_backup_files": 20,
+    "backup_retention_days": 7,
+    "max_log_files": 10,
+    "log_retention_days": 3,
+    "max_session_files": 15,
+    "session_retention_days": 5,
+    "max_report_files": 15,
+    "report_retention_days": 5,
+    "max_summary_files": 10,
+    "summary_retention_days": 7,
+    "cleanup_at_startup": true
+  },
+  "qwen_agent": {
+    "workspace_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy",
+    "summary_files_enabled": true,
+    "reference_files_enabled": true,
+    "auto_save_summaries": true,
+    "summary_save_interval": 10,
+    "reference_types": ["code_patterns", "error_solutions", "optimizations", "debugging"]
+  }
+}

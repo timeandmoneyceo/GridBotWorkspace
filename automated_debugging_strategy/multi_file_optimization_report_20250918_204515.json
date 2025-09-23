@@ -1,0 +1,277 @@
+{
+  "timestamp": "20250918_204515",
+  "total_files": 2,
+  "total_candidates": 8,
+  "total_applied": 8,
+  "efficiency_rate": 100.0,
+  "file_results": {
+    "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\gridbot_websocket_server.py": {
+      "candidates": 4,
+      "applied": 4,
+      "results": [
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\gridbot_websocket_server.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:28:41,642 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        },
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\gridbot_websocket_server.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:28:59,975 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        },
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\gridbot_websocket_server.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:32:23,325 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        },
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\gridbot_websocket_server.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:37:07,286 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        }
+      ]
+    },
+    "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py": {
+      "candidates": 4,
+      "applied": 4,
+      "results": [
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:28:41,642 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        },
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:28:59,975 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        },
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:32:23,325 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        },
+        {
+          "candidate": {
+            "function_name": "LogPerformanceIssue",
+            "file_path": "c:\\Users\\805Sk\\GridBotWorkspace\\automated_debugging_strategy\\GridbotBackup.py",
+            "line_start": 0,
+            "line_end": 0,
+            "code_snippet": "",
+            "performance_issues": [
+              "2025-09-18 20:37:07,286 - __main__ - INFO - [SUMMARY] LLM PERFORMANCE SUMMARY"
+            ],
+            "optimization_priority": 5,
+            "estimated_impact": "medium"
+          },
+          "success": true,
+          "original_performance": {
+            "execution_time": 0.0,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": 0,
+            "profile_data": null
+          },
+          "optimized_performance": {
+            "execution_time": 0.1,
+            "memory_usage": null,
+            "cpu_usage": null,
+            "function_calls": null,
+            "profile_data": null
+          },
+          "improvement_ratio": 0.0,
+          "applied": true,
+          "error": null
+        }
+      ]
+    }
+  }
+}

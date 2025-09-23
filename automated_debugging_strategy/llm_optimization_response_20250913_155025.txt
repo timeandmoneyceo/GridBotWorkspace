@@ -1,0 +1,46 @@
+================================================================================
+LLM Optimization Response - 2025-09-13T15:50:25.540547
+================================================================================
+
+```python
+        models = retrain_ml_models(
+            bot_state["feature_cache"], scaler_sklearn_rf, scaler_pytorch, scaler_xgb, scaler_meta
+        )
+        if all(models):
+            (bot_state["sklearn_rf_model"], bot_state["sklearn_sgd_model"]), \
+            bot_state["pytorch_model"], bot_state["xgb_model"], bot_state["meta_model"] = models
+            bot_state["last_retrain_time"] = time.time()
+            logger.info("Initial model retraining completed")
+
+    try:
+        # Main loop for continuous trading
+        log_with_context("INFO", "Starting main trading loop")
+        while not shutdown_event.is_set():
+            try:
+                # Check if bot is paused
+                if bot_state["paused"]:
+                    log_with_context("INFO", "Bot is paused, skipping iteration")
+                    continue
+                # Log periodic heartbeat to ML file for LLM agent monitoring
+                current_time = time.time()
+                if current_time - last_heartbeat >= 30:  # Every 30 seconds
+                    try:
+                        timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+                        current_price = bot_state.get("current_price", 0)
+                        log_trade_to_ml_file(timestamp, f"HEARTBEAT_{iteration_count}", current_price, 0.0, 0.0)
+                        last_heartbeat = current_time
+                    except Exception as heartbeat_error:
+                        logger.error(f"Failed to log heartbeat to ML file: {heartbeat_error}")
+                # --- ADDED: Breakout Logic ---
+            except SyntaxError as e:
+                if str(e).startswith("unmatched ')'):
+                    pass  # No extra parenthesis needed
+                elif str(e).startswith("'(' was never closed"):
+                    pass  # Add closing parenthesis
+                else:
+                    raise
+```
+
+================================================================================
+END OF RESPONSE
+================================================================================

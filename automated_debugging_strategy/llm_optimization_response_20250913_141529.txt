@@ -1,0 +1,41 @@
+================================================================================
+LLM Optimization Response - 2025-09-13T14:15:29.057773
+================================================================================
+
+```python
+# Fixed code section (without line numbers)
+try:
+    # Main loop for continuous trading
+    log_with_context("INFO", "Starting main trading loop")
+
+    while not shutdown_event.is_set():
+        try:
+            # Check if bot is paused
+            if bot_state["paused"]:
+                log_with_context("INFO", "Bot is paused, skipping iteration")
+
+                # INTENTIONAL ERROR: Missing closing parenthesis to test debugging system
+                time.sleep(config.CHECK_ORDER_FREQUENCY)
+
+            # Log periodic heartbeat to ML file for LLM agent monitoring
+            current_time = time.time()
+            if current_time - last_heartbeat >= 30:  # Every 30 seconds
+                try:
+                    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
+                    current_price = bot_state.get("current_price", 0)
+                    log_trade_to_ml_file(timestamp, f"HEARTBEAT_{iteration_count}", current_price, 0.0, 0.0)
+                    last_heartbeat = current_time
+                except Exception as e:
+                    # Log any errors that occur during heartbeat logging
+                    log_with_context("ERROR", str(e))
+        except Exception as e:
+            # Log any unexpected errors that occur during trading loop iteration
+            log_with_context("ERROR", str(e))
+except Exception as e:
+    # Log any unexpected errors that occur during main trading loop execution
+    log_with_context("ERROR", str(e))
+```
+
+================================================================================
+END OF RESPONSE
+================================================================================

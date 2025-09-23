@@ -1,0 +1,12 @@
+{
+  "session_id": "debug_20250911_194526",
+  "target_file": "test_simple_error.py",
+  "start_time": "2025-09-11T19:45:26.690633",
+  "end_time": "2025-09-11T19:47:23.451829",
+  "iterations": 2,
+  "max_iterations": 3,
+  "errors_fixed": 1,
+  "total_errors": 1,
+  "success": false,
+  "final_status": "Unable to fix any errors in this iteration"
+}

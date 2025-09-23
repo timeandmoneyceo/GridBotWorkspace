@@ -1,0 +1,207 @@
+--- a/automated_debugging_strategy\file_management_system.py
++++ b/automated_debugging_strategy\file_management_system.py
+@@ -42,6 +42,10 @@
+             'max_summary_files': 10,  # Keep last 10 summary files
+             'summary_retention_days': 7,  # Keep summaries for 7 days
+             
++            # Sourcery workspace doctor files
++            'max_sourcery_files': 10,  # Keep last 10 Sourcery reports
++            'sourcery_retention_days': 7,  # Keep Sourcery files for 7 days
++            
+             # Temporary file cleanup
+             'temp_file_age_hours': 24,  # Remove temp files older than 24 hours
+             
+@@ -57,11 +61,39 @@
+             # File patterns to manage
+             'file_patterns': {
+                 'backups': ['*.backup.*'],
+-                'logs': ['*.log', '*.log.*'],
+-                'sessions': ['automation_session_*.json'],
+-                'reports': ['automation_report_*.json'],
+-                'summaries': ['summary_iteration_*.txt', '*summary*.txt', '*_summary.txt'],
+-                'temp': ['temp_*', '*.tmp', '*.temp']
++                'logs': [
++                    '*.log', '*.log.*',
++                    'master_automation.log',
++                    'debug_orchestrator.log',
++                    'debug_log_parser.log'
++                ],
++                'sessions': [
++                    'automation_session_*.json',
++                    'continuous_automation_report_*.json'
++                ],
++                'reports': [
++                    'automation_report_*.json',
++                    'debug_report_*.json',
++                    'optimization_report_*.json',
++                    'optimization_report_enhanced_*.json'
++                ],
++                'summaries': [
++                    'summary_iteration_*.txt', '*summary*.txt', '*_summary.txt',
++                    'ai_strategy_report_*.md',
++                    'optimization_analysis_report.md'
++                ],
++                'sourcery_files': [
++                    'sourcery_summary_*.md',
++                    'sourcery_changes_*.patch',
++                    'sourcery_review_*.txt',
++                    'sourcery_review_*.json',
++                    'sourcery_diffs_*.patch'
++                ],
++                'temp': [
++                    'temp_*', '*.tmp', '*.temp',
++                    '.sourcery_restart_pending',
++                    'improvement_tracking.json'
++                ]
+             }
+         }
+     
+@@ -128,17 +160,22 @@
+             cleanup_stats['files_removed'] += session_stats['removed']
+             cleanup_stats['space_freed_mb'] += session_stats['space_freed_mb']
+             
+-            # 4. Clean summary files
++            # 4. Clean Sourcery files
++            sourcery_stats = self.cleanup_sourcery_files()
++            cleanup_stats['files_removed'] += sourcery_stats['removed']
++            cleanup_stats['space_freed_mb'] += sourcery_stats['space_freed_mb']
++            
++            # 5. Clean summary files
+             summary_stats = self.cleanup_summary_files()
+             cleanup_stats['files_removed'] += summary_stats['removed']
+             cleanup_stats['space_freed_mb'] += summary_stats['space_freed_mb']
+             
+-            # 5. Clean temporary files
++            # 6. Clean temporary files
+             temp_stats = self.cleanup_temp_files()
+             cleanup_stats['files_removed'] += temp_stats['removed']
+             cleanup_stats['space_freed_mb'] += temp_stats['space_freed_mb']
+             
+-            # 6. Create organized directory structure if needed
++            # 7. Create organized directory structure if needed
+             self.ensure_directory_structure()
+             
+             cleanup_stats['cleanup_time'] = time.time() - start_time
+@@ -374,6 +411,56 @@
+         self.logger.info(f"   Temp cleanup: {stats['removed']} files removed, {stats['space_freed_mb']:.1f} MB freed")
+         return stats
+     
++    def cleanup_sourcery_files(self) -> Dict:
++        """Clean up Sourcery workspace doctor files"""
++        self.logger.info("Cleaning Sourcery workspace doctor files...")
++        
++        stats = {'removed': 0, 'space_freed_mb': 0}
++        max_files = self.config.get('max_sourcery_files', 10)
++        retention_days = self.config.get('sourcery_retention_days', 7)
++        cutoff_time = time.time() - (retention_days * 24 * 3600)
++        
++        # Handle different locations for Sourcery files
++        locations = [
++            '.',  # Current directory
++            'reports',  # Reports directory
++            'automation_logs'  # Logs directory
++        ]
++        
++        files = []
++        for location in locations:
++            for pattern in self.config['file_patterns']['sourcery_files']:
++                pattern_path = os.path.join(location, pattern) if location != '.' else pattern
++                files.extend(glob.glob(pattern_path))
++        
++        if files:
++            # Sort by modification time (newest first)
++            files.sort(key=lambda f: os.path.getmtime(f), reverse=True)
++            
++            for i, file_path in enumerate(files):
++                should_remove = False
++                reason = ""
++                
++                if i >= max_files:
++                    should_remove = True
++                    reason = f"excess (>{max_files})"
++                elif os.path.getmtime(file_path) < cutoff_time:
++                    should_remove = True
++                    reason = f"old (>{retention_days} days)"
++                
++                if should_remove:
++                    try:
++                        file_size = os.path.getsize(file_path) / (1024 * 1024)  # MB
++                        os.remove(file_path)
++                        stats['removed'] += 1
++                        stats['space_freed_mb'] += file_size
++                        self.logger.info(f"   Removed Sourcery file: {os.path.basename(file_path)} ({reason})")
++                    except Exception as e:
++                        self.logger.warning(f"   Failed to remove {file_path}: {e}")
++        
++        self.logger.info(f"   Sourcery cleanup: {stats['removed']} files removed, {stats['space_freed_mb']:.1f} MB freed")
++        return stats
++    
+     def ensure_directory_structure(self):
+         """Ensure organized directory structure exists"""
+         self.logger.info("Ensuring directory structure...")
+
+--- a/automated_debugging_strategy\master_automation_pipeline.py
++++ b/automated_debugging_strategy\master_automation_pipeline.py
+@@ -507,6 +507,8 @@
+                 'session_retention_days': 5,
+                 'max_summary_files': 10,
+                 'summary_retention_days': 7,
++                'max_sourcery_files': 10,
++                'sourcery_retention_days': 7,
+                 'temp_file_age_hours': 24,
+                 'cleanup_at_startup': True
+             },
+
+--- a/automated_debugging_strategy\sourcery_workspace_doctor.py
++++ b/automated_debugging_strategy\sourcery_workspace_doctor.py
+@@ -57,7 +57,7 @@
+         self.summary_file = REPORTS_DIR / f"sourcery_summary_{self.timestamp}.md"
+         self.changes_file = REPORTS_DIR / f"sourcery_changes_{self.timestamp}.patch"
+         
+-        self._log("🏥 Sourcery Workspace Doctor Started")
++        self._log("[DOCTOR] Sourcery Workspace Doctor Started")
+         self._log(f"📁 Workspace: {WORKSPACE}")
+         self._log(f"📋 Timestamp: {self.timestamp}")
+         
+@@ -242,7 +242,7 @@
+         self._log("📊 Generating summary report...")
+         
+         lines = [
+-            "# 🏥 Sourcery Workspace Doctor Report",
++            "# [DOCTOR] Sourcery Workspace Doctor Report",
+             f"**Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
+             f"**Workspace:** `{WORKSPACE.name}`",
+             "",
+@@ -287,7 +287,7 @@
+     
+     def run_doctor(self, apply_fixes: bool = True) -> Dict[str, Any]:
+         """Main workspace doctor routine"""
+-        self._log("🏥 Starting workspace doctor routine...")
++        self._log("[DOCTOR] Starting workspace doctor routine...")
+         self._log(f"🔧 Apply mode: {apply_fixes}")
+         
+         # Check Sourcery availability
+@@ -302,7 +302,7 @@
+             }
+             
+             # Write error summary
+-            error_summary = "# 🏥 Sourcery Workspace Doctor Report\n\n❌ **Error:** Sourcery CLI not available\n"
++            error_summary = "# [DOCTOR] Sourcery Workspace Doctor Report\n\n[ERROR] **Error:** Sourcery CLI not available\n"
+             self.summary_file.write_text(error_summary, encoding="utf-8")
+             return error_result
+         
+@@ -343,12 +343,12 @@
+             "stats": change_stats
+         }
+         
+-        self._log(f"🏥 Workspace doctor completed: {len(change_stats)} files modified")
++        self._log(f"[DOCTOR] Workspace doctor completed: {len(change_stats)} files modified")
+         return result
+     
+     def close(self):
+         """Clean up resources"""
+-        self._log("🏥 Workspace doctor session ended")
++        self._log("[DOCTOR] Workspace doctor session ended")
+         try:
+             self.log_fp.close()
+         except Exception:

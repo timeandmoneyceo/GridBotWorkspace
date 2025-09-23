@@ -1,0 +1,16 @@
+# Simple test file for optimization
+def slow_function(data):
+    result = []
+    for item in data:
+        if item > 0:
+            result.append(item * 2)
+    return result
+
+def main():
+    numbers = [1, 2, 3, 4, 5]
+    processed = slow_function(numbers)
+    print(f"Processed: {processed}")
+    return processed
+
+if __name__ == "__main__":
+    main()
