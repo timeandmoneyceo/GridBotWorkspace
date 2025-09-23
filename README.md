@@ -160,6 +160,8 @@ This project is proprietary software developed by Ronald R. Kilbert. All rights 
 
 - **Ronald R. Kilbert**: Lead developer and system architect
 - **AI Community**: For advancing the field of artificial intelligence
+- **Grok Fast**: AI agent assistance from GitHub Copilot
+- **Claude 4**: AI agent assistance from GitHub Copilot
 - **Open Source Contributors**: For the foundational technologies that power this system
 
 ---
