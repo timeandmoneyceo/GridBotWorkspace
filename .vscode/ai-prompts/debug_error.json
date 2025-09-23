@@ -2,7 +2,7 @@
   "name": "debug_error",
   "template": "Analyze this Python error and provide a detailed explanation with fix suggestions:\n\nError: {error_message}\nCode Context: {code_context}\n\nProvide:\n1. Error explanation\n2. Root cause analysis\n3. Specific fix suggestions\n4. Prevention strategies",
   "category": "debugging",
-  "created": "2025-09-20T18:45:18.212251",
+  "created": "2025-09-23T12:41:44.234287",
   "metadata": {
     "default": true,
     "gridbot_standard": true

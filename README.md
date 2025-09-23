@@ -1,177 +1,265 @@
-# 🤖 GridBot: AI-Powered Automation System
+# 🏥 Automated Debugging & Optimization Strategy with Sourcery Integration
 
-> **Advanced Intelligent Automation for Cryptocurrency Trading and Development Workflows**
+> **Advanced AI-powered automation pipeline for intelligent code debugging, optimization, and workspace maintenance**
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-GridBotWorkspace-blue?style=for-the-badge&logo=github)](https://github.com/timeandmoneyceo/GridBotWorkspace)
-[![Python](https://img.shields.io/badge/Python-3.8+-green?style=for-the-badge&logo=python)](https://python.org)
-[![AI Powered](https://img.shields.io/badge/AI--Powered-Advanced-orange?style=for-the-badge&logo=openai)](https://ollama.ai)
-
-## 👤 Publisher
+## 👤 **Publisher**
 
 **Ronald R. Kilbert** - Lead Developer and Publisher
 
 ---
 
-## 📖 Overview
+## 🎯 **Overview**
 
-GridBot is a comprehensive AI-powered automation system designed for cryptocurrency trading and intelligent development workflows. This system combines cutting-edge artificial intelligence with robust automation capabilities to create a seamless, self-improving development and trading environment.
+This comprehensive automation strategy provides intelligent debugging and optimization capabilities with integrated Sourcery workspace doctor functionality. The system automatically:
 
-### 🎯 Core Capabilities
+- 🔧 **Applies Sourcery code improvements** before each pipeline run
+- 🐛 **Debugs Python code** using AI-powered error analysis  
+- ⚡ **Optimizes performance** with systematic improvement tracking
+- 🏥 **Maintains workspace health** with automated cleanup and file management
+- 🔄 **Restarts intelligently** when Sourcery applies changes
 
-- **🤖 Multi-Model AI Integration**: Qwen, DeepSeek, SmolLM2, and Claude for intelligent decision-making
-- **🔧 Automated Code Optimization**: Real-time code improvement with AI-powered refactoring
-- **🐛 Intelligent Debugging**: AI-assisted error detection and automated fix generation
-- **📊 Performance Monitoring**: Continuous system health tracking and optimization
-- **🔄 Self-Improving Architecture**: Automated learning and enhancement cycles
-- **🌐 WebSocket Communication**: Real-time data streaming and system coordination
+## 🚀 **Key Features**
 
-## 🏗️ Architecture
+### **Sourcery Workspace Doctor Integration**
+- **Automated code quality improvements** before each strategy execution
+- **Change detection and reporting** with detailed summaries
+- **Intelligent restart mechanism** when changes are applied
+- **Focused analysis** of the `automated_debugging_strategy` folder only
+
+### **AI-Powered Debugging**
+- **Multi-model approach**: Qwen3 orchestrator + DeepSeek debugger + SmolLM2 optimizer
+- **Autonomous error detection** and intelligent fix generation
+- **Comprehensive test validation** after each fix attempt
+- **Systematic improvement tracking** with 1% continuous enhancement goals
+
+### **Advanced Optimization**
+- **Performance profiling** and bottleneck identification
+- **Code structure analysis** with AST-based improvements
+- **Log-driven optimization** based on runtime patterns
+- **Enhancement prioritization** for maximum impact
+
+### **Intelligent File Management**
+- **Automated cleanup** of old reports, logs, and temporary files
+- **Smart retention policies** for different file types
+- **Workspace organization** with categorized storage
+- **Backup management** with configurable retention
+
+## 📁 **Project Structure**
 
 ```
-GridBotWorkspace/
-├── 🤖 automated_debugging_strategy/     # AI-powered debugging & optimization
-├── 📊 automation_logs/                   # System activity monitoring
-├── 💾 backups/                          # Automated backup management
-├── 📈 reports/                          # Performance and analysis reports
-├── 🔧 sessions/                         # Workflow session tracking
-├── 🧪 test_logs/                        # Testing and validation logs
-└── ⚙️  configuration/                   # System configuration files
+automated_debugging_strategy/
+├── 🏥 ai_model_doctor.py              # AI Model Doctor & workspace health
+├── 🎯 master_automation_pipeline.py    # Main orchestration pipeline
+├── 🤖 qwen_agent_interface.py         # Multi-model AI coordination
+├── 🐛 debug_automation_orchestrator.py # Intelligent debugging engine
+├── ⚡ enhanced_optimization_system.py   # Advanced code optimization
+├── 📊 systematic_improvement_tracker.py # Continuous enhancement tracking
+├── 🧠 intelligent_apps_integration.py  # AI-powered features
+├── ✏️  automated_file_editor.py        # Safe semantic code editing
+├── 📝 debug_log_parser.py             # Error analysis and parsing
+├── 🗂️  file_management_system.py      # Automated cleanup & organization
+├── ⚙️  automation_config.json         # Configuration settings
+└── 📚 Additional AI modules...
 ```
 
-## 🚀 Key Features
+## 🛠️ **Setup & Installation**
 
-### AI-Powered Development
-- **Intelligent Code Analysis**: AST-based code understanding and improvement
-- **Automated Testing**: AI-generated test suites and validation
-- **Semantic Code Search**: Natural language code discovery
-- **Performance Profiling**: Real-time system optimization
+### **Prerequisites**
+- Python 3.8+ with virtual environment
+- Sourcery CLI installed in the virtual environment
+- Ollama server running locally (for AI models)
 
-### Automation Pipeline
-- **Continuous Integration**: Automated build and deployment cycles
-- **Error Recovery**: Intelligent failure detection and correction
-- **Workflow Orchestration**: Multi-step process automation
-- **Resource Management**: Intelligent memory and CPU optimization
+### **Installation Steps**
 
-### Trading Integration
-- **Market Analysis**: Real-time cryptocurrency data processing
-- **Strategy Optimization**: AI-driven trading algorithm improvement
-- **Risk Management**: Automated position sizing and stop-loss management
-- **Performance Analytics**: Comprehensive trading metrics and reporting
+1. **Setup Virtual Environment**
+   ```bash
+   cd GridBotWorkspace
+   python -m venv .venv
+   .venv\Scripts\activate  # Windows
+   ```
 
-## 🛠️ Technology Stack
+2. **Install Sourcery**
+   ```bash
+   pip install sourcery
+   ```
 
-- **Programming Language**: Python 3.8+
-- **AI Models**: Qwen3, DeepSeek Coder, SmolLM2, Claude
-- **Frameworks**: Custom AI orchestration, WebSocket communication
-- **Database**: SQLite with automated schema management
-- **Deployment**: Local development with cloud-ready architecture
+3. **Install Required Models**
+   ```bash
+   ollama pull qwen3:1.7b
+   ollama pull deepseek-coder
+   ollama pull smollm2:1.7b
+   ```
 
-## 📋 Prerequisites
+4. **Configure VS Code Tasks**
+   - Tasks are pre-configured in `.vscode/tasks.json`
+   - Sourcery Workspace Doctor runs automatically on folder open
+   - Multiple AI-enhanced pipeline options available
 
-- Python 3.8 or higher
-- Virtual environment (recommended)
-- Ollama server for AI model hosting
-- Git for version control
+## 🎮 **Usage**
 
-## 🚀 Quick Start
+### **Automatic Integration (Recommended)**
 
-### 1. Clone the Repository
+The Sourcery Workspace Doctor runs automatically:
+- ✅ **On VS Code folder open** (via task)
+- ✅ **Before each pipeline execution** (integrated)
+- ✅ **With intelligent restart** when changes are applied
+
+### **Manual Execution**
+
+**Run AI Model Doctor:**
 ```bash
-git clone https://github.com/timeandmoneyceo/GridBotWorkspace.git
-cd GridBotWorkspace
+python automated_debugging_strategy/ai_model_doctor.py --apply
 ```
 
-### 2. Setup Environment
-```bash
-python -m venv .venv
-.venv\Scripts\activate  # Windows
-pip install -r requirements.txt
-```
-
-### 3. Configure AI Models
-```bash
-# Install required AI models
-ollama pull qwen3:1.7b
-ollama pull deepseek-coder
-ollama pull smollm2:1.7b
-```
-
-### 4. Launch System
+**Run Full Pipeline:**
 ```bash
 python automated_debugging_strategy/master_automation_pipeline.py
 ```
 
-**Alternative**: For autonomous mode with continuous monitoring:
+**Run Pipeline with Sourcery Restart Support:**
 ```bash
-python run_autonomous_manager.py
+python automated_debugging_strategy/pipeline_with_sourcery_restart.py
 ```
 
-## 📚 Documentation
+### **Available VS Code Tasks**
 
-- **[AI Development Environment](AI_ENHANCED_README.md)**: Comprehensive AI integration guide
-- **[Automated Debugging Strategy](automated_debugging_strategy/README.md)**: Core automation pipeline documentation
-- **[Security Setup](SECURITY_SETUP.md)**: Security configuration and best practices
-- **[GitHub Setup](GITHUB_SETUP.md)**: Repository and collaboration guidelines
+- **Sourcery: Workspace Doctor** - Apply code improvements
+- **AI: Pipeline with Sourcery Restart** - Full automation with restart support
+- **AI: Full Pipeline with Intelligence** - Comprehensive AI-enhanced pipeline
+- **Agent: Health Check** - System validation
+- **AI Toolkit: Model Health Check** - Verify AI model availability
 
-## 🎮 Usage Examples
+## ⚙️ **Configuration**
 
-### AI-Powered Code Optimization
-```python
-from automated_debugging_strategy.enhanced_optimization_system import EnhancedOptimizationSystem
-
-# Initialize AI optimizer
-optimizer = EnhancedOptimizationSystem()
-
-# Analyze and optimize code
-results = optimizer.optimize_file("target_script.py")
-print(f"Optimization complete: {results.improvements} enhancements applied")
+### **Sourcery Integration Settings**
+```json
+{
+  "sourcery_integration": {
+    "auto_apply": true,
+    "target_directory": "automated_debugging_strategy",
+    "generate_reports": true,
+    "restart_on_changes": true
+  }
+}
 ```
 
-### Intelligent Debugging
-```python
-from automated_debugging_strategy.debug_automation_orchestrator import DebugAutomationOrchestrator
-
-# Initialize AI debugger
-debugger = DebugAutomationOrchestrator()
-
-# Analyze error and generate fix
-fix = debugger.analyze_error("error_traceback.txt")
-print(f"AI-generated fix: {fix.solution}")
+### **File Management Settings**
+```json
+{
+  "file_management": {
+    "max_report_files": 15,
+    "max_log_files": 10,
+    "report_retention_days": 7,
+    "log_retention_days": 3,
+    "cleanup_at_startup": true
+  }
+}
 ```
 
-## 🤝 Contributing
+## 📊 **Output & Reports**
 
-We welcome contributions to the GridBot project! Please see our contributing guidelines and code of conduct.
+### **Sourcery Reports**
+- `reports/sourcery_summary_YYYYMMDD_HHMMSS.md` - Human-readable summary
+- `reports/sourcery_changes_YYYYMMDD_HHMMSS.patch` - Detailed changes (if any)
+- `automation_logs/sourcery_doctor_YYYYMMDD_HHMMSS.log` - Execution log
 
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### **Pipeline Reports**
+- `automation_report_YYYYMMDD_HHMMSS.json` - Comprehensive automation results
+- `automation_session_YYYYMMDD_HHMMSS.json` - Session data and statistics
+- `debug_report_debug_YYYYMMDD_HHMMSS.json` - Detailed debugging results
 
-## 📄 License
+## 🔄 **Workflow Integration**
 
-This project is proprietary software developed by Ronald R. Kilbert. All rights reserved.
+### **Typical Automation Flow**
 
-## 📞 Contact
+1. **Sourcery Analysis** 🏥
+   - Scans `automated_debugging_strategy` folder
+   - Applies code quality improvements
+   - Generates change reports
 
-**Ronald R. Kilbert**
-- **Email**: Publisher and lead developer
-- **GitHub**: [timeandmoneyceo](https://github.com/timeandmoneyceo)
-- **Repository**: [GridBotWorkspace](https://github.com/timeandmoneyceo/GridBotWorkspace)
+2. **Pipeline Restart** 🔄 (if changes made)
+   - Exits with code 42 to signal restart needed
+   - Wrapper script restarts with improved code
+   - Prevents infinite loops with restart limits
 
-## 🙏 Acknowledgments
+3. **AI Debugging** 🤖
+   - Analyzes error patterns and logs
+   - Generates intelligent fixes
+   - Validates solutions with comprehensive tests
 
-- **Ronald R. Kilbert**: Lead developer and system architect
-- **AI Community**: For advancing the field of artificial intelligence
-- **Grok Fast**: AI agent assistance from GitHub Copilot
-- **Claude 4**: AI agent assistance from GitHub Copilot
-- **Open Source Contributors**: For the foundational technologies that power this system
+4. **Performance Optimization** ⚡
+   - Profiles code execution
+   - Identifies optimization opportunities
+   - Applies systematic improvements
+
+5. **Workspace Cleanup** 🧹
+   - Removes old reports and logs
+   - Maintains organized file structure
+   - Preserves important data within retention policies
+
+## 🎯 **Advanced Features**
+
+### **AI Strategy Orchestration**
+- **Intelligent strategy selection** based on project context
+- **Multi-model coordination** for specialized tasks
+- **Adaptive learning** from previous automation runs
+
+### **Continuous Improvement**
+- **1% improvement tracking** for systematic enhancement
+- **Performance baseline establishment** and monitoring
+- **Enhancement prioritization** based on impact analysis
+
+### **Safety & Reliability**
+- **Comprehensive backup system** for all code changes
+- **Rollback capabilities** for failed optimizations
+- **Syntax validation** before applying any changes
+- **Health monitoring** for all automation components
+
+## 🚧 **Troubleshooting**
+
+### **Common Issues**
+
+**Sourcery hanging or timing out:**
+- Ensure Sourcery is installed in the virtual environment
+- Check that `.venv/Scripts/sourcery.exe` exists
+- Verify workspace directory permissions
+
+**Pipeline restart not working:**
+- Check that `pipeline_with_sourcery_restart.py` is being used
+- Verify exit code 42 handling in calling scripts
+- Ensure restart marker files are writable
+
+**AI models not responding:**
+- Verify Ollama server is running: `ollama serve`
+- Check model availability: `ollama list`
+- Test model connectivity: `ollama run qwen3:1.7b "Hello"`
+
+### **Debug Mode**
+```bash
+python master_automation_pipeline.py --verbose --test-mode
+```
+
+## 📈 **Performance Metrics**
+
+The system tracks and reports:
+- **Code quality improvements** (via Sourcery metrics)
+- **Error reduction rates** (debugging effectiveness)
+- **Performance gains** (optimization impact)
+- **Automation efficiency** (time saved vs. manual processes)
+
+## 🤝 **Contributing**
+
+When contributing to this automation strategy:
+
+1. **Run AI Doctor first**: `python ai_model_doctor.py --apply`
+2. **Test thoroughly**: Use the comprehensive test suite
+3. **Follow patterns**: Maintain consistency with existing AI integration
+4. **Document changes**: Update relevant README sections
+
+## 📄 **License**
+
+This automation strategy is part of the GridBot project and follows the same licensing terms.
 
 ---
 
-> **🎯 Mission**: To create the most advanced AI-powered automation system for cryptocurrency trading and software development, pushing the boundaries of intelligent automation and self-improving systems.
-
-**Built with ❤️ by Ronald R. Kilbert**</content>
-<parameter name="filePath">c:\Users\805Sk\GridBotWorkspace\README.md
+> **🎯 Mission**: To provide the most advanced, intelligent, and reliable automation strategy for Python development, with seamless Sourcery integration for continuous code quality improvement.

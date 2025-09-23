@@ -2,7 +2,7 @@
   "name": "optimize_function",
   "template": "Analyze this Python function for performance optimization opportunities:\n\n{function_code}\n\nProvide:\n1. Performance bottlenecks\n2. Optimization suggestions\n3. Improved code examples\n4. Expected performance gains",
   "category": "optimization",
-  "created": "2025-09-20T18:45:18.215251",
+  "created": "2025-09-23T12:41:44.237223",
   "metadata": {
     "default": true,
     "gridbot_standard": true

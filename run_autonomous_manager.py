@@ -1,6 +1,6 @@
 import os
 import time
-from automated_debugging_strategy.master_automation_pipeline import MasterAutomationPipeline
+from master_automation_pipeline import MasterAutomationPipeline
 
 
 def main():

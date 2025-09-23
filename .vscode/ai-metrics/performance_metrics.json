@@ -1,0 +1,329 @@
+{
+  "model_usage": {
+    "llm_interface": [
+      {
+        "timestamp": "2025-09-23T12:47:51.287092",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 31.162181,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T12:49:12.644195",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 28.814982,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T12:54:53.768676",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 28.353929,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T12:55:52.084807",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 20.518628,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:01:46.152020",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 33.387611,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:02:30.283828",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 16.581619,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:08:14.807406",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 21.852394,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:08:52.774394",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 11.270507,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:14:32.930389",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 22.721314,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:15:03.334386",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 7.105046,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:21:13.947680",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 59.432281,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:21:57.569166",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 21.288019,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:28:19.279575",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 24.207624,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:28:44.838345",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 6.788797,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:34:29.334766",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 21.091336,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:34:58.570634",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 14.298827,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:40:36.990376",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 22.337548,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:41:12.880401",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 8.631878,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:46:58.407648",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 33.573303,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:47:30.201843",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 6.84325,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:53:08.879184",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 26.349008,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:53:45.927050",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 12.501432,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T13:59:34.853986",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 29.345898,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T14:00:26.228896",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 22.944739,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T14:06:12.238201",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 29.790689,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      },
+      {
+        "timestamp": "2025-09-23T14:06:50.274006",
+        "operation": "_call_deepseek_debugger",
+        "response_time": 16.014945,
+        "success": true,
+        "metadata": {
+          "args_count": 1,
+          "kwargs_count": 1
+        }
+      }
+    ]
+  },
+  "response_times": {
+    "llm_interface": [
+      31.162181,
+      28.814982,
+      28.353929,
+      20.518628,
+      33.387611,
+      16.581619,
+      21.852394,
+      11.270507,
+      22.721314,
+      7.105046,
+      59.432281,
+      21.288019,
+      24.207624,
+      6.788797,
+      21.091336,
+      14.298827,
+      22.337548,
+      8.631878,
+      33.573303,
+      6.84325,
+      26.349008,
+      12.501432,
+      29.345898,
+      22.944739,
+      29.790689,
+      16.014945
+    ]
+  },
+  "success_rates": {
+    "llm_interface": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "error_rates": {
+    "llm_interface": []
+  }
+}

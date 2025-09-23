@@ -23,21 +23,21 @@ import queue
 # Import our automation modules
 try:
     # Try relative imports first (when run as module)
-    from .debug_log_parser import DebugLogParser
-    from .qwen_agent_interface import QwenAgentInterface
-    from .automated_file_editor import SafeFileEditor
-    from .debug_automation_orchestrator import DebugAutomationOrchestrator, DebugSession
-    from .optimization_automation_system import OptimizationAutomationSystem
-    from .enhanced_optimization_system import OptimizationResult
-    from .file_management_system import FileManagementSystem
-    from .serena_integration import SerenaMCPClient, SerenaCodeAnalyzer, SerenaCodeEditor
-    from .systematic_improvement_tracker import ImprovementTracker
-    from .intelligent_apps_integration import IntelligentAppsIntegration, enhance_master_pipeline_with_ai
-    from .ai_testing_debugging import AITestGenerator, AIDebuggingAssistant, create_test_for_function, analyze_error_with_ai
-    from .intelligent_error_explanation import IntelligentErrorExplainer, enhance_debug_orchestrator_with_ai
-    from .ai_workflow_documentation import AIWorkflowAutomation, AIDocumentationGenerator, ExternalAPIManager
-    from .ai_toolkit_integration import AIToolkitIntegration, enhance_pipeline_with_ai_toolkit
-    from .autonomous_strategy_manager import AutonomousStrategyManager
+    from debug_log_parser import DebugLogParser
+    from qwen_agent_interface import QwenAgentInterface
+    from automated_file_editor import SafeFileEditor
+    from debug_automation_orchestrator import DebugAutomationOrchestrator, DebugSession
+    from optimization_automation_system import OptimizationAutomationSystem
+    from enhanced_optimization_system import OptimizationResult
+    from file_management_system import FileManagementSystem
+    from serena_integration import SerenaMCPClient, SerenaCodeAnalyzer, SerenaCodeEditor
+    from systematic_improvement_tracker import ImprovementTracker
+    from intelligent_apps_integration import IntelligentAppsIntegration, enhance_master_pipeline_with_ai
+    from ai_testing_debugging import AITestGenerator, AIDebuggingAssistant, create_test_for_function, analyze_error_with_ai
+    from intelligent_error_explanation import IntelligentErrorExplainer, enhance_debug_orchestrator_with_ai
+    from ai_workflow_documentation import AIWorkflowAutomation, AIDocumentationGenerator, ExternalAPIManager
+    from ai_toolkit_integration import AIToolkitIntegration, enhance_pipeline_with_ai_toolkit
+    from autonomous_strategy_manager import AutonomousStrategyManager
 except ImportError:
     # Fall back to absolute imports (when run as script) - now that files are in correct location
     from debug_log_parser import DebugLogParser
