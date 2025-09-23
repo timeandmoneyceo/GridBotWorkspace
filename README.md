@@ -98,6 +98,11 @@ ollama pull smollm2:1.7b
 
 ### 4. Launch System
 ```bash
+python automated_debugging_strategy/master_automation_pipeline.py
+```
+
+**Alternative**: For autonomous mode with continuous monitoring:
+```bash
 python run_autonomous_manager.py
 ```
 
