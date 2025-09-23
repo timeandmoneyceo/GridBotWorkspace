@@ -88,17 +88,33 @@ venv.bak/
 # Log files
 *.log
 logs/
+automation_logs/
+test_logs/
+reports/
+sessions/
+temp/
+tmp/
+
+# Generated JSON reports
 automation_report_*.json
 automation_session_*.json
+debug_report_*.json
+optimization_report_*.json
+multi_file_optimization_report_*.json
+continuous_automation_report_*.json
+debug_report_debug_*.json
+optimization_report_enhanced_*.json
+
+# Generated Markdown reports
 ai_strategy_report_*.md
+sourcery_summary_*.md
+sourcery_changes_*.patch
 
 # Temporary files
 *.tmp
 *.temp
 *.bak
 *.backup
-temp/
-tmp/
 
 # === AI/ML MODEL FILES ===
 # Large model files
@@ -111,10 +127,36 @@ models/
 checkpoints/
 *.onnx
 
+# Client model files
+client_*.pkl
+client_*.scaler
+client_*.target_scaler
+client_pytorch_*.pkl
+
+# === SYSTEM STATE FILES ===
+.ai_doctor_restart_pending
+.sourcery_restart_pending
+last_deepseek_prompt.txt
+last_qwen_prompt.txt
+runtime_config.py
+
 # === DATABASE FILES ===
 *.db
 *.sqlite
 *.sqlite3
+database.db
+gridbot_websocket_server.db
+
+# === BACKUP FILES ===
+backups/
+*.backup.*
+*.quarantine.*
+
+# === AI MODEL FILES ===
+*.pkl
+*.safetensors
+client_*.pkl
+client_*.scaler
 
 # === OS SPECIFIC ===
 # Windows
